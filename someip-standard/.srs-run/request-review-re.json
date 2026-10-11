@@ -1,0 +1,9 @@
+{
+  "mode": "review-re",
+  "domains": ["someip"],
+  "targets": ["/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement"],
+  "baseline_ref": null,
+  "restrictions": [],
+  "publish_requested": false,
+  "review_reuse_policy": "force_full_review"
+}

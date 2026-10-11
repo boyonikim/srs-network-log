@@ -1,0 +1,145 @@
+{
+  "schema_version": "compact-1",
+  "task_id": "review-re",
+  "input_fingerprint": "fa39a905498e211da6ea1030692be90c9ba74390557a2fc2a234faed48252635",
+  "entries": [
+    {
+      "leaf_uid": "SRS-UID-168afc4c4227",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Service Suspension on Ethernet Interface Fault Detection은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 Ethernet Fault Management 모듈로부터 Ethe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-2352d34613f6",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : SD Initiation Prohibition Before Internal State Ready은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 자신의 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-299c2c3e3a58",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : FindService Start After Discovery Trigger은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 consumer의 service discovery ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-2f0f0d96b5a9",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Ethernet Fault Service Termination Path Dispatch은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 정상 중단 조건을 만족하지 못하거나 이벤트 수신 시점부터 {P_E...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-41ad9a7d6d24",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Ethernet Fault Timeout Without Link Loss Guard은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 이벤트 수신 시점부터 {P_EthFault_ServiceSuspe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-55f4f1b550fd",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Middleware Initialization Completion State은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신 채널 ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-5bda6a079cf0",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : OfferService Repetition Phase Retry은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 OfferService 개시 후 Initial Wait Phase...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-5e88eb3bc03d",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : EventGroup Subscription List Initial State은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 power-on 시 EventGroup 구독 목록을 비활성 상태로...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-67d6428f1fae",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : OfferService Main Phase Cyclic Offer은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 Repetition Phase 종료 후 {P_SD_CyclicOf...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-6f3b094b82cc",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Service Expiry on Link Loss or TTL Expiry은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 Ethernet interface fault가 발생했음을 나타내는...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-89aadd77ac69",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : OfferService Start After Provider Registration은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 provider 등록 이벤트를 수신하면 OfferS...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-911e12e10da6",
+      "overall_verdict": "PASS",
+      "req_pattern": "Interface & Communication",
+      "feedback_markdown": "- __유형 분류__ : Interface & Communication\n   - 분류 사유 : Middleware Initialization Completion Event Suppression Before Readiness은(는) 경계를 넘는 메시지/이벤트 통지 정의을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 초기화 완료 상태가 설정되지 않은 경우 application에 미...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-91ee417deb54",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : FindService Repetition Until Max Reached or Offer Received은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 최초 FindService 전송 후 해당 service의 Offe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-936d288733a4",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Service Registration After Internal State Ready은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 {P_RM_ServiceRegister_Timeou...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-b23269fdfb7d",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Initialization Timeout Failure Detection은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 초기화 시작 시점부터 {P_RM_Init_Timeout} 이내에 ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-b5eb729c532c",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Unexpected Signal Handling During Initialization Readiness Check은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: '초기화 준비 상태 확인 중 서비스 등록 테이블 초기화 완료, SD 상태 머신 초기화 완료 및 통신 채널 확립 완료 이외의 준비...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-b77efffe27e3",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : EventGroup Termination On Link Loss Or TTL Expiry은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 StopOffer 및 StopSubscribe 전송이 가능한 상태...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-ba8ad3054b3c",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Service Registration Table Initial State은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 power-on 시 서비스 등록 테이블을 등록 없음 상태로 리셋하...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-becdf8f4e60a",
+      "overall_verdict": "PASS",
+      "req_pattern": "Interface & Communication",
+      "feedback_markdown": "- __유형 분류__ : Interface & Communication\n   - 분류 사유 : Initialization Completion Notification은(는) 경계를 넘는 메시지/이벤트 통지 정의을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 완료되면 application에 미들웨어 초기화...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-c376cb3c50b1",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Unexpected Signal Handling During Service Registration은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: '서비스 등록 처리 중 준비 완료 신호 이외의 신호가 수신되면 SOME/IP Routing Management 소프트웨어는 현재...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-c6ee13f28768",
+      "overall_verdict": "PASS",
+      "req_pattern": "Interface & Communication",
+      "feedback_markdown": "- __유형 분류__ : Interface & Communication\n   - 분류 사유 : Middleware Initialization Failure Notification은(는) 경계를 넘는 메시지/이벤트 통지 정의을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 실패하면 application에 미들웨어 초기화...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-d1038ac62015",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : SD State Machine Initial State은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 power-on 시 SD 상태 머신을 Initial Wait Ph...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    },
+    {
+      "leaf_uid": "SRS-UID-f49e08b0fe13",
+      "overall_verdict": "PASS",
+      "req_pattern": "Mode & State Behavior",
+      "feedback_markdown": "- __유형 분류__ : Mode & State Behavior\n   - 분류 사유 : Service Registration Failure Notification은(는) 트리거에 따른 상태 판단 또는 상태 전이 동작을 핵심 의도로 함.\n- __4대 기준 체크__ PASS (※ 4대 기준 모두 O일 때만 PASS)\n   - (기준1. 모호성 배제): O (사유: 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨.)\n   - (기준2. 주어 명확성): O (사유: 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님).)\n   - (기준3. 검증 가능성): O (사유: 'SOME/IP Routing Management 소프트웨어는 {P_RM_ServiceRegister_Timeout}ms 이내에...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능.)\n   - (기준4. 원자성): O (사유: 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님.)\n- __개선 제안:__\n\n    | 제안 | Summary / Description |\n    |---|---|\n    |1|현재 명세 유지 \\ 현재 명세가 4대 기준을 모두 충족하여 구조적 개선 제안 없음|\n"
+    }
+  ]
+}

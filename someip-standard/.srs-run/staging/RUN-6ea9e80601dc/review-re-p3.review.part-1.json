@@ -1,0 +1,2281 @@
+{
+  "schema_version": "compact-1",
+  "task_id": "review-re-p3",
+  "input_fingerprint": "60900a883012ea5aea3d6de9cdaa86a68f6ca49ad8369f4744dfb5503fe2a951",
+  "decisions": [
+    {
+      "evaluation_id": "dfd111ae36b9153b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "9fdd540fedb6a137",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "5a1affabae94e7b2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "성공(타임아웃 내 전송)과 실패(미완료 시 별도 경로) 두 분기를 모두 자체 서술해 미수력 분기 없음."
+    },
+    {
+      "evaluation_id": "adda09e77ed0b972",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "자기 본문이 비정상 조건(타임아웃 내 전송 미완료)과 대응(link loss/TTL expiry 감지 여부에 따른 별도 경로 적용)을 가지고 있어 절차1에서 PASS."
+    },
+    {
+      "evaluation_id": "cf205d199f715929",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "정상 중단 조건 판단과 타임아웃 내 StopOffer/StopSubscribe 전송을 규정하는 의무 문장(\"~하여야 한다\")이 본문에 복수 존재."
+    },
+    {
+      "evaluation_id": "e851b689670b6fd1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_EthFault_ServiceSuspend_Timeout}(0017 자체 정의), foreign={}, declared=[], required=[] -> 조건 6. 같은 L3(RoutingManagement) 내 다른 leaf가 해당 이름을 소유하지 않아 중복 없음."
+    },
+    {
+      "evaluation_id": "14ce621b804ef5d9",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "의무 주체가 일관되게 SOME/IP Routing Management 소프트웨어다. Ethernet Fault Management는 입력 이벤트 출처로만 언급된다."
+    },
+    {
+      "evaluation_id": "8563a29677d643e1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "c5bf573fa471a961",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. eth fault 이벤트 수신(트리거) → 정상중단 조건 판단 → offer/subscription 중단 상태로 전이하는 구조로 mode_state 핵심 형태와 일치."
+    },
+    {
+      "evaluation_id": "2b7386aefe528159",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-168afc4c4227: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 Ethernet Fault Management 모듈로부터 Ethe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "44876627a88442db",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "0951a95118046b37",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "c8b8dd1e1d4ac371",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "단일 가드 조건만 서술, 암시된 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "35d9e39b5e333b12",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "자기 본문 전체가 준비 미완료(비정상 상태)에서의 거부 동작(SD 동작 미수행)을 규정하는 가드 그 자체라 절차1에서 PASS."
+    },
+    {
+      "evaluation_id": "20df1aad406d61ef",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "\"수행하지 않아야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "e06e56c4304daae1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6 (파라미터 참조 없음)."
+    },
+    {
+      "evaluation_id": "6e6f2aa2f6e355b4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "의무 주체 = SOME/IP Routing Management 소프트웨어, 단일."
+    },
+    {
+      "evaluation_id": "6ebdaa62aeeb1c66",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "7982e6a86bc763a0",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 초기화 미완료 상태(트리거) 중 SD 동작 금지(가드 상태) 구조로 mode_state와 일치."
+    },
+    {
+      "evaluation_id": "74f1f2b801d72ab5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2352d34613f6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 자신의 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "a7a479f7e43ac273",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "0165efc51e9abedc",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "b793ffd26cb86ca4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "정상/비정상(준비전, 요청미수신) 두 경우 모두 자체 서술."
+    },
+    {
+      "evaluation_id": "ba6ec030f8ccdaa9",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "자기 본문에 명시적 ※ 예외 규칙(준비 전 또는 요청 미수신시 개시 안함) 존재하여 절차1 PASS."
+    },
+    {
+      "evaluation_id": "30fbbf594921e677",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "\"개시하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "ed33b283bab66b94",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "bd0dea176d725463",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "의무 주체 일관되게 RM 소프트웨어."
+    },
+    {
+      "evaluation_id": "55c7f887469a1993",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "2667358ede75812b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 트리거(discovery 요청 수신) → FindService 개시라는 상태 전이로 mode_state와 일치."
+    },
+    {
+      "evaluation_id": "2239fed0f7a3d59e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-299c2c3e3a58: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 consumer의 service discovery ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "01b47aae34e616cb",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "e333e9081b70670f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "0f2410099265a977",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "전송불가/가능 두 경우를 모두 자체 서술하여 암시된 분기 없음."
+    },
+    {
+      "evaluation_id": "6bb5ea6c81a0df93",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "본문 자체가 이미 비정상(정상중단 실패 후 link loss/TTL expiry 감지) 상황의 대응 경로를 다루므로 절차1에서 PASS."
+    },
+    {
+      "evaluation_id": "c9ce9b73747b63fd",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "의무 문장(\"적용하여야 한다\") 존재."
+    },
+    {
+      "evaluation_id": "c60a84585ee37890",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_EthFault_ServiceSuspend_Timeout}(0017 소유, input.leaves), declared=[SRS-UID-168afc4c4227], required=[SRS-UID-168afc4c4227] -> required==declared, 조건 6."
+    },
+    {
+      "evaluation_id": "f3b004df27480834",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "9ec6a54bd367df5f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "a12fa99ae6f07e88",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 조건 충족 시 전송불가/가능 경로 중 하나로 전이하는 디스패치 구조로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "b519b902b795f69e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-2f0f0d96b5a9: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 정상 중단 조건을 만족하지 못하거나 이벤트 수신 시점부터 {P_E...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "eef2ba0ed56a70fc",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "3b70a4a757ab0ac5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "5e5f8cb745bda647",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "경계조건과 금지 동작을 자체 서술, 암시된 미해결 분기 없음."
+    },
+    {
+      "evaluation_id": "07a73bb28ef3f576",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "본문 자체가 타임아웃 실패이나 link loss/TTL expiry 미감지라는 경계조건과 그 대응(가드)을 서술하므로 절차1 PASS."
+    },
+    {
+      "evaluation_id": "4208aeaffe4bca7b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "\"적용하여서는 안 된다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "91d2555d0455d0ec",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_EthFault_ServiceSuspend_Timeout}(0017 소유, input.leaves), declared=[SRS-UID-168afc4c4227], required=[SRS-UID-168afc4c4227] -> 일치, 조건 6."
+    },
+    {
+      "evaluation_id": "3d6807ffdff796e7",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "7dbc7443a54a91d6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "c0c18af933f4d624",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. link-up/TTL유효/미감지 상태에서 종료경로 미적용(가드) 패턴으로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "f2da0cec5d7093d6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-41ad9a7d6d24: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 이벤트 수신 시점부터 {P_EthFault_ServiceSuspe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "70bbffaf0d7bd34a",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "2c99d9881a450b6b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "fccb48b8c7451710",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "완료/미완료 두 분기 모두 자체 서술."
+    },
+    {
+      "evaluation_id": "6319eb5520aa3613",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "본문이 \"하나라도 완료되지 않으면 설정하여서는 안 된다\"는 비정상(미완료) 조건과 대응을 자체 서술하여 절차1 PASS."
+    },
+    {
+      "evaluation_id": "11476d24bbeb31f5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "\"설정하여야 하며\", \"설정하여서는 안 된다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "01ad21a5f8f4d19c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6 (파라미터 참조 없음)."
+    },
+    {
+      "evaluation_id": "9cd24f875b918dad",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어 단일."
+    },
+    {
+      "evaluation_id": "b6fb1ece7ba511ac",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "d680e64ca28433f3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 4개 하위 초기화 완료 여부(AND)에 따라 내부 상태 플래그를 설정/미설정하는 구조로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "53df96bf568dbcdd",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-55f4f1b550fd: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신 채널 ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "4d5ae3a2ec6e4b77",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "6600662e00d92140",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "27778953f3a15e8b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "Repetition Phase 종료 후 동작은 Notes에서 SRS-SomeIP-RoutingManagement-0095가 규정한다고 명시, 암시된 분기 모두 다른 절에서 다뤄짐."
+    },
+    {
+      "evaluation_id": "6f211b55af157b3c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "자기 본문에는 비정상 경로가 없으나, Notes가 명시한 관련 형제 SRS-SomeIP-RoutingManagement-0017(related_items 정방향, mode_state)의 Description이 Ethernet fault 발생 시 StopOffer/StopSubscribe로 이 Repetition Phase 재전송을 중단시키는 예외 동작을 실제로 서술하므로 위임 성립."
+    },
+    {
+      "evaluation_id": "5bde8db5d6bbf98b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "\"재전송하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "1c0bd2e8f558e887",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_SD_RepetitionBaseDelay, P_SD_RepetitionMax}, declared=[SRS-UID-c7c211a83191](SD-0004, context_leaves 소유), required=[SRS-UID-c7c211a83191] -> 다른 context leaf(SD-0003,0005,0011,0115,0116)는 이 두 이름을 소유하지 않음, required==declared, 조건 6."
+    },
+    {
+      "evaluation_id": "be19327e5de210bd",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "af77888d90231813",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "81144416e2b2621c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. Repetition Phase라는 상태 구간 동안의 반복 동작(진입~종료 조건)을 규정하는 While-상태 패턴으로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "af3534a1b35fa2b2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5bda6a079cf0: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 OfferService 개시 후 Initial Wait Phase...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "d4aaed8755066470",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "e2fd79906be53a84",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "b964d3a73e8ca392",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "power-on 리셋이라는 단일 무조건 동작으로 자체 암시 분기 없음."
+    },
+    {
+      "evaluation_id": "4cdd58e5b4955a20",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "forward related_items에 포함된 SRS-UID-b23269fdfb7d(0004, exception_fault 타입)가 존재하여 규칙의 첫 번째 위임 조건(형제의 spec_pattern_type이 exception_fault)을 충족하므로 PASS."
+    },
+    {
+      "evaluation_id": "aaa786b8a3ad54ff",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "리셋하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "530e973876f47bc6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "4ddc1d89057fcf2d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "6853871e3376c3dd",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "6f7fdd7b44f2584e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. power-on 트리거 → 비활성 상태로 리셋하는 고전적 mode_state 패턴."
+    },
+    {
+      "evaluation_id": "64bb979837816da4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-5e88eb3bc03d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 power-on 시 EventGroup 구독 목록을 비활성 상태로...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "8a9147c9050c3072",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사 없음, 모든 조건이 구체적."
+    },
+    {
+      "evaluation_id": "b8b0cd5583d19fa9",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 단일 트리거-동작 상태 전이만 다루어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "c305c43ef9130c21",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "조기 종료(Offer 수신 시) 단일 조건만 서술, 자체 서술이 암시하는 추가 분기 없음(소진 처리는 별개 leaf SD-0115의 독립 책임)."
+    },
+    {
+      "evaluation_id": "2e47a17c23ba8b0c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "자기 본문은 정상(조기 종료) 경로만 서술하여 자체에는 비정상 처리가 없으나, forward related_items에 포함된 SRS-SomeIP-ServiceDiscovery-0002와 SRS-SomeIP-ServiceDiscovery-0008이 모두 spec_pattern_type=exception_fault여서 규칙의 첫 번째 위임 조건(형제의 타입이 exception_fault)을 충족하므로 PASS."
+    },
+    {
+      "evaluation_id": "95be6b4b52ec4703",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "중단하고 ... 진입하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "bed6798acc2b3658",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "parameter_definition:\n- name: P_SD_FindRepetitionBaseDelay\n  type: uint32\n  range: 10~5000\n  unit: ms\n  default: '200'\n- name: P_SD_FindRepetitionMax\n  type: uint8\n  range: 0~10\n  unit: count\n  default: '3'",
+      "location": "SRS-UID-631981184c37: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0116 자체 정의), foreign={}(본문에 {P_Name} 참조 없음), declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional)와 SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "0ddef6e268f1b43c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "의무 주체가 SOME/IP Service Discovery 기능으로 일관, 다른 모듈에 의무를 지우지 않음."
+    },
+    {
+      "evaluation_id": "7c0599833d03db2e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어 'SOME/IP Service Discovery 기능'으로 명시된 SW 기능 단위."
+    },
+    {
+      "evaluation_id": "a53c2edfd82036f8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. Repetition Phase 진행 중 Offer 수신(트리거) → 재전송 중단+Main Phase 진입(상태 전이)으로 mode_state 핵심 형태에 부합."
+    },
+    {
+      "evaluation_id": "eae39d6df2865899",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-631981184c37: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'Repetition Phase 진행 중 OfferService 수신' 트리거와 '즉시 중단+Main Phase 진입' 동작이 구체적이어 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "b642db828986fd92",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "6854b2522d1faca0",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "13442e264d8f465f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "Repetition Phase에서의 선행 재전송은 0094가 규정함을 Notes에 명시, 자체 서술 범위(Main Phase 유지) 내 암시 분기 없음."
+    },
+    {
+      "evaluation_id": "8108014ec3cbfb73",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "Notes가 명시한 관련 형제 SRS-SomeIP-RoutingManagement-0017(related_items 정방향, mode_state)의 Description이 Ethernet fault 시 StopOffer로 이 Main Phase 주기 전송을 인터럽트하는 예외 동작을 실제로 서술하므로 위임 성립."
+    },
+    {
+      "evaluation_id": "28a427834364e9ee",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "\"유지하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "67d21c94f8eb54c1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_SD_CyclicOfferDelay}, declared=[SRS-UID-74abb389f183](SD-0005 소유), required=[SRS-UID-74abb389f183] -> 다른 context leaf는 이 이름을 소유하지 않음, required==declared, 조건 6."
+    },
+    {
+      "evaluation_id": "e2ce5e829167807c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "eb982881adc21b27",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "83886d74e1125c4d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. Main Phase 상태 동안의 주기 전송 유지로 While-상태 패턴에 부합."
+    },
+    {
+      "evaluation_id": "79d3558e2be857fc",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-67d6428f1fae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 Repetition Phase 종료 후 {P_SD_CyclicOf...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "e3c8bcb526d9b3d6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "66381f73c2d186e1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "6b58a2ffadf4b928",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "전송불가 조건과 그 대응을 자체에서 완결, 0062와의 배타적 관계도 명시."
+    },
+    {
+      "evaluation_id": "0cdd7aeb03b5ca64",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "64f6d509d47f0cd2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "\"수행하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "ee72a8d18d3a7be3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "4609afdcc6dd5f9f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "283b6a30b8997db7",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "e41fbb14f8867310",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(link loss/TTL expiry, 전송불가) → 대응(만료처리+Unsubscribe) 구조로 핵심 형태 충족."
+    },
+    {
+      "evaluation_id": "305914f9ac7e6d9a",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-6f3b094b82cc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 Ethernet interface fault가 발생했음을 나타내는...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "678469e510a2cbb3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "5dfc935e233ae8af",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "732b900191827586",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "준비완료/미완료 두 경우 모두 자체 서술."
+    },
+    {
+      "evaluation_id": "61b2164d1af8b7f8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "명시적 ※ 예외 규칙(준비 전 등록 이벤트 수신시 개시 안함) 존재하여 자체 서술 단계에서 PASS."
+    },
+    {
+      "evaluation_id": "5888a2be7cd5c3d3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "\"개시하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "a6a527ad3e9573d9",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "3400167163bf1d90",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "4e3872b670dee9c1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "40e1f70ef6f3706d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 준비완료+provider등록 트리거 → OfferService 개시 상태 전이로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "01a2cd8f8193dde1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-89aadd77ac69: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 provider 등록 이벤트를 수신하면 OfferS...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "28ce876e3f635297",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "d45fd64ae8270137",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "240f26386b1858b6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "단일 억제 조건만 서술, 자체 암시 분기 없음."
+    },
+    {
+      "evaluation_id": "6b8fcf7e8e24aad8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "\"초기화 미완료\"라는 비준비 상태에 대해 통지 거부라는 거부 동작을 자체 서술하므로 절차1 PASS."
+    },
+    {
+      "evaluation_id": "557452633e578fde",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "\"통지하여서는 안 된다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "dc89b93d39bdaee2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "9d61b7f8d7bf2753",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관. application은 통지 대상으로만 언급."
+    },
+    {
+      "evaluation_id": "03786b4bcc3092e3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "34da8c812bc71c24",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=interface_comm. 초기화 미완료 상태에서 application으로의 경계 이벤트 통지를 억제하는 내용으로 경계 메시지 교환 정의에 부합."
+    },
+    {
+      "evaluation_id": "a72600a36f1a00ed",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-911e12e10da6: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 초기화 완료 상태가 설정되지 않은 경우 application에 미...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "e08eade106779beb",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "3273771e52d85a95",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "d8a8a15e9272ab16",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "\"최대 횟수 도달\" 또는 \"Offer 수신\" 두 경우 모두 결과(재전송 중단)를 명시적으로 서술하여 자기 서술이 암시하는 분기 자체는 빠뜨리지 않음 (소진 후 통지 여부는 RE-EXCEPT-001에서 별도 판정)."
+    },
+    {
+      "evaluation_id": "052539ef57ff28f1",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "{P_SD_FindRepetitionMax}에 도달하거나 해당 service의 OfferService를 수신하면 재전송을 중단하여야 한다.",
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "자기 본문은 \"최대 횟수 도달\" 또는 \"Offer 수신\" 두 경우 모두 동일하게 \"재전송 중단\"만 규정하고, 탐색 실패(최대 횟수 소진, Offer 미수신)라는 비정상 결과에 대한 이벤트/통지/복구 동작을 서술하지 않는다. 확인한 연관 형제는 forward related_items의 SRS-SomeIP-RoutingManagement-0036(mode_state, 개시 트리거만 규정, 소진 처리 없음)과 SRS-SomeIP-ServiceDiscovery-0011(nonfunctional, 재전송 간격 공식만 소유, 소진 처리 없음) 두 건이며, 둘 다 exception_fault 타입도 아니고 소진 시 결과를 서술하지도 않아 위임이 성립하지 않는다. 이번 회차에 target으로 승격된 SRS-SomeIP-ServiceDiscovery-0115(exception_fault, FindService 소진 시 통지+Main Phase 진입을 정확히 규정)가 실질적 위임 대상이지만, 0096의 related_items에도 0115의 related_items에도 서로를 가리키는 링크가 없어(양방향 모두 부재) 확인된 형제로 인정할 수 없다. 링크가 생성되기 전까지 FAIL 유지.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "1f102f598896eabf",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "\"재전송하여야 하며\", \"중단하여야 한다\" 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "e8316d83f4f3099f",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "{P_SD_FindRepetitionMax}에 도달할 때까지 {P_SD_FindRepetitionBaseDelay}로 FindService를 재전송하여야 하며",
+      "location": "SRS-UID-91ee417deb54: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}, declared=[SRS-UID-f422d5d47636](SD-0011). required 계산: 두 이름을 parameter_definition으로 소유한 leaf를 input.leaves/input.context_leaves 전체에서 찾으면 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional), SRS-UID-631981184c37(SD-0116, leaves, mode_state), SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault) 3곳이 동일한 두 파라미터 이름을 각자 parameter_definition으로 소유하고 있음(ServiceDiscovery 모듈 내 중복 소유 상태, 이번 회차에 SD-0116/SD-0115가 직접 RE-PARAMREF-001 FAIL로 확인됨). required={f422d5d47636, 631981184c37, acb1c88d4eae}, declared={f422d5d47636} -> required-declared={631981184c37, acb1c88d4eae} ≠ ∅, 조건 2.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "ae0488cf3c377995",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "ac3e5bd3948a912d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "c254e0615871d3aa",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. FindService 재전송 반복 구간(진입~종료조건: 최대횟수 또는 Offer수신)을 규정하는 While-상태 패턴으로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "4c7f252c4f28c6c4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-91ee417deb54: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 최초 FindService 전송 후 해당 service의 Offe...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "293c45cde03b70ff",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "cd52e0be526f2109",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "21605ae8dbb1cd16",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "완료/미완료 두 경우를 자체에서 서술, 실패 통지는 0091이 별도 담당."
+    },
+    {
+      "evaluation_id": "426d0968a51fb448",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "타임아웃 미완료라는 비정상 조건과 이에 대한 거부(등록완료로 취급하지 않음) 동작을 자체 서술하므로 절차1 PASS."
+    },
+    {
+      "evaluation_id": "b463a59d8b4fe0f2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "완료하여야 하며, 취급하여서는 안 된다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "3e8bff21362ba566",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_RM_ServiceRegister_Timeout}(0003 자체 정의), foreign={}, declared=[], required=[] -> 조건 6. 같은 L3 내 다른 leaf가 이 이름을 소유하지 않아 중복 없음(0091은 mapped_parameter로만 참조)."
+    },
+    {
+      "evaluation_id": "3788346d87685820",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "ed208c59676cfa09",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "9dce9851d58f93cb",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 타임아웃 내 완료 여부에 따라 등록완료 상태 취급을 결정하는 구조로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "2bac08eb51ef9333",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-936d288733a4: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 준비 완료 후 {P_RM_ServiceRegister_Timeou...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "be802fc31f2c1d35",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사 없음."
+    },
+    {
+      "evaluation_id": "4db6bc8e50f081e2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 단일 트리거-동작 흐름만 담고 있어 분리 대상 아님."
+    },
+    {
+      "evaluation_id": "2d08b4c5fc763487",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "Repetition Phase 재전송 정책에 따라 FindService를 재전송하여야 한다.",
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "본문은 \"재전송 정책이 있다\"는 것만 서술하고 그 정책의 종료/경계(언제 멈추는지, 성공/실패 결과가 무엇인지)를 전혀 명시하지 않는다(사실상 RM-0096보다도 정보가 적음). Notes에도 추가 설명 없음.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "874f7dbcf6c93813",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "SOME/IP Service Discovery 기능은 FindService 전송 후 해당 service의 OfferService를 수신하지 못한 경우 Repetition Phase 재전송 정책에 따라 FindService를 재전송하여야 한다.",
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "자기 본문은 재전송 트리거만 서술하고 소진(최대 횟수 도달 등) 시의 비정상 결과나 대응을 전혀 언급하지 않는다. 확인된 연관 형제는 forward related_items의 SRS-SomeIP-ServiceDiscovery-0011(nonfunctional, 재전송 간격 공식만 소유, 소진 처리 없음) 하나뿐이며, exception_fault 타입도 아니고 소진 시 결과도 서술하지 않아 위임이 성립하지 않는다. 실질적으로 소진 처리를 규정하는 SRS-SomeIP-ServiceDiscovery-0115(exception_fault)는 에 있지만 0102의 related_items에도 0115의 related_items에도 서로를 가리키는 링크가 없어 확인된 형제로 인정할 수 없다.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "981f260e2f17b102",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "재전송하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "ab9aa2b897a575b1",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "parameter_definition:\n- name: P_SD_FindInitialDelay_Min\n  type: uint32\n  range: 0~1000\n  unit: ms\n  default: '100'\n- name: P_SD_FindInitialDelay_Max\n  type: uint32\n  range: 0~3000\n  unit: ms\n  default: '300'",
+      "location": "SRS-UID-a92ae9773aae: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_SD_FindInitialDelay_Min, P_SD_FindInitialDelay_Max}(SD-0102 자체 정의), 본문은 {P_Name} 참조가 전혀 없어 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과. 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-909832e4ca50(SD-0010, context, nonfunctional)와 SRS-UID-f26b7f9795fc(SD-0101, leaves, nonfunctional)가 동일한 두 이름을 동일한 값으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "c3e3105bdc039744",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "의무 주체가 SOME/IP Service Discovery 기능으로 일관, 다른 모듈에 의무를 지우지 않음."
+    },
+    {
+      "evaluation_id": "25be410079630021",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어 'SOME/IP Service Discovery 기능'로 명시."
+    },
+    {
+      "evaluation_id": "c706e5e23378d8c6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. FindService 전송 후 Offer 미수신(트리거) → Repetition Phase 재전송(상태 유지/진행) 구조로 mode_state 핵심 형태에 부합."
+    },
+    {
+      "evaluation_id": "6b5314f58aad38d6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-a92ae9773aae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — Offer 미수신 여부라는 구체적 조건으로 T/F 판정 가능(종료 조건 자체의 미서술은 RE-COMPLETE-001에서 별도 판정)."
+    },
+    {
+      "evaluation_id": "9a32b8cf3a91e063",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사 없음."
+    },
+    {
+      "evaluation_id": "25d9bc814b8d4f0e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 소진→중단→통지→전환이 인과적으로 결합된 단일 흐름으로 분리 대상 아님."
+    },
+    {
+      "evaluation_id": "6a179d9aca644aba",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "소진 조건과 대응(중단+통지+Phase 전환)을 자체에서 완결, 암시된 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "78c84d217b107fc2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "bb4fde59d3c76915",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "중단하고 ... 통지한 뒤 ... 진입하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "95ab94574b8d183c",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "parameter_definition:\n- name: P_SD_FindRepetitionBaseDelay\n  type: uint32\n  range: 10~5000\n  unit: ms\n  default: '200'\n- name: P_SD_FindRepetitionMax\n  type: uint8\n  range: 0~10\n  unit: count\n  default: '3'",
+      "location": "SRS-UID-acb1c88d4eae: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0115 자체 정의), 본문은 {P_SD_FindRepetitionMax}만 참조하며 이는 own에 포함되므로 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional)와 SRS-UID-631981184c37(SD-0116, leaves, mode_state)가 동일한 두 이름을 동일한 값으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "54a3e2f1d7548123",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "의무 주체가 SOME/IP Service Discovery 기능으로 일관, application은 통지 대상으로만 언급."
+    },
+    {
+      "evaluation_id": "5dd30773439a4420",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어 'SOME/IP Service Discovery 기능'으로 명시."
+    },
+    {
+      "evaluation_id": "543944bd8e20241f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(최대 횟수 소진, Offer 미수신)→보고(application 통지)+복구(Repetition 종료, Main Phase 진입) 구조로 핵심 형태를 완전히 충족."
+    },
+    {
+      "evaluation_id": "d6361ba541c0e421",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-acb1c88d4eae: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 최대 횟수/Offer 수신 여부라는 구체적 조건으로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "27f381fb5c4a1bfa",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "5da58b273d6eec75",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "f2634fd52cf4e70e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "초기화 실패 후 통지(0083)/미통지(0082) 처리는 Notes에서 명시적으로 구체 leaf ID로 위임되어 암시 분기가 다루어짐."
+    },
+    {
+      "evaluation_id": "7dea689336d3c32b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "8e9808641ef7b0b6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "처리하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "ba5b93313644de43",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_RM_Init_Timeout}(0004 자체 정의), foreign={}, declared=[], required=[] -> 조건 6. 같은 L3 내 중복 소유 없음."
+    },
+    {
+      "evaluation_id": "465ca8a5fa618bcc",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "07be626478c86c78",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "290f6ee437be4aff",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(타임아웃 내 준비상태 미도달) → 분류(초기화 실패로 처리) 구조로 핵심 형태 충족 (구체적 통지는 0082/0083에 위임)."
+    },
+    {
+      "evaluation_id": "127c3e8b8ae838bf",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b23269fdfb7d: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 초기화 시작 시점부터 {P_RM_Init_Timeout} 이내에 ...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "a0a6a79fc91478d7",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "e334cd75139a4ff5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "78f64e271873395f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "예상치 못한 신호 수신 시의 대응을 자체에서 완결, 암시된 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "eb14ee3df79c82a2",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "ecb889c7fd623ded",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "기록하여야 한다 의무 문장 존재(본문 중간에 오타적인 등호 문자가 있으나 규칙 문장 존재 자체는 무관)."
+    },
+    {
+      "evaluation_id": "0531447fee2d6e75",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "21fb3dc9eadaeda6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "fcbea0d68ee5bfa4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "91920c441ed0d04d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(예상치 못한 신호 수신)→보고(경고 기록)+상태 유지(복구) 구조로 핵심 형태 충족."
+    },
+    {
+      "evaluation_id": "cc5828c50d933d2d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b5eb729c532c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — '초기화 준비 상태 확인 중 서비스 등록 테이블 초기화 완료, SD 상태 머신 초기화 완료 및 통신 채널 확립 완료 이외의 준비...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "af3dab033d9fe967",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "060311ac4a6d0028",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "caf4b40f7dd0c64d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "전송가능/불가능 두 경우를 자체에서 서술, 0058와의 배타적 관계도 명시."
+    },
+    {
+      "evaluation_id": "837095da4f38b369",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "명시적 ※ 예외 규칙(미감지시 종료 동작 미수행) 존재하여 자체 서술 단계에서 PASS."
+    },
+    {
+      "evaluation_id": "d115e983035161c5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "종료하여야 한다, 수행하지 않아야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "1b5822e695aefece",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "40781d665be5011b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "fb895233b7491135",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "1069885764d1327b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. 전송가능+LL/TTL감지 트리거 → 종료 상태 전이로 mode_state에 부합."
+    },
+    {
+      "evaluation_id": "ce7b995045e506c9",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-b77efffe27e3: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 StopOffer 및 StopSubscribe 전송이 가능한 상태...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "877ff554689fe697",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "0cd3346166ef55e1",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "69f374a6abcfadf4",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "power-on 리셋이라는 단일 무조건 동작으로 자체 암시 분기 없음."
+    },
+    {
+      "evaluation_id": "6d69abe0aed82de6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "자기 본문은 무조건 리셋만 서술해 비정상 분기가 없으나, forward related_items에 포함된 SRS-UID-b23269fdfb7d(0004, exception_fault 타입)가 존재하여 규칙의 첫 번째 위임 조건(형제의 spec_pattern_type이 exception_fault)을 충족하므로 PASS."
+    },
+    {
+      "evaluation_id": "9d0a3b331d6a9bec",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "리셋하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "17b1533618123dd5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "c9da3e3540ed3802",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "7989c4168d8755af",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "a6e1094c86d1b464",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. power-on 트리거 → 등록없음 상태로 리셋하는 고전적 mode_state 패턴."
+    },
+    {
+      "evaluation_id": "5ef70cc92d126894",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-ba8ad3054b3c: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 power-on 시 서비스 등록 테이블을 등록 없음 상태로 리셋하...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "bab3ccebca6b4168",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "0e1a5cdbe52abfaf",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "7a06c8f022988e96",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "전달성공/실패 두 경우를 자체에서 서술."
+    },
+    {
+      "evaluation_id": "4b92938402eebae8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "명시적 ※ 예외 규칙(전달 실패 시 오류 기록+전달실패 보고, 전달된 것으로 처리 안함) 존재하여 자체 서술 단계에서 PASS."
+    },
+    {
+      "evaluation_id": "0c64136c5c3ac16e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "통지하여야 한다, 처리하지 않아야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "ea8ded296597b833",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "62de8b766319f095",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관, application은 통지 대상."
+    },
+    {
+      "evaluation_id": "e1f369a08d564b7c",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "34bc523910bdf8d7",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=interface_comm. 초기화 완료 시 application으로의 경계 이벤트 통지 정의로 부합."
+    },
+    {
+      "evaluation_id": "8028c580cd83595d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-becdf8f4e60a: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 완료되면 application에 미들웨어 초기화...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "8412364bd65cd6aa",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "e185f87c0787b76d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "fff841ed91e567c5",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "예상치 못한 신호 수신 시 대응을 자체에서 완결."
+    },
+    {
+      "evaluation_id": "7c625b77d35f1d4b",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "b706ccebaefc3b78",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "기록하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "53e44f0264c23668",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "994ad7de219cea71",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "2c719c979581413e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "7814fe775063a7be",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(예상치 못한 신호)→보고(경고 기록)+상태 유지 구조로 핵심 형태 충족."
+    },
+    {
+      "evaluation_id": "f4534cf1540eec22",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c376cb3c50b1: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — '서비스 등록 처리 중 준비 완료 신호 이외의 신호가 수신되면 SOME/IP Routing Management 소프트웨어는 현재...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "ff7613046184d432",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "a644384447ab9120",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "4e6308fae6485adf",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "실패/판단불가 두 경우를 자체에서 서술."
+    },
+    {
+      "evaluation_id": "4a1352e3e7b20496",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "명시적 ※ 예외 규칙(판단 불가 시 통지 여부 미결정, 완료처리 안함) 존재하여 자체 서술 단계에서 PASS."
+    },
+    {
+      "evaluation_id": "40bab9339333c6da",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "통지하여야 한다, 결정하지 않아야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "7945424af7b97601",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={}, declared=[], required=[] -> 조건 6."
+    },
+    {
+      "evaluation_id": "5e0e74f1ff266bda",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관, application은 통지 대상."
+    },
+    {
+      "evaluation_id": "53056b2e6e490eab",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "f9c07b5cf02e751a",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=interface_comm. 초기화 실패 시 application으로의 경계 오류 통지 정의로 부합."
+    },
+    {
+      "evaluation_id": "f8de77bf695d4bba",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-c6ee13f28768: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 실패하면 application에 미들웨어 초기화...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "e649258f71db353e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "711a363511b3f0e6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "01fd57d142383791",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "리셋과 매 진입시 지연적용을 자체에서 서술, 암시된 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "41a768e3e352667f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "forward related_items에 포함된 SRS-SomeIP-ServiceDiscovery-0003(nonfunctional, Initial Wait Timing 소유)의 Description이 \"Service Offer 절차가 개시되지 않은 경우 Initial Wait Phase 대기 및 OfferService 전송을 수행하지 않아야 한다\"는 명시적 ※ 예외 규칙으로 0075의 \"매 진입시 지연 적용\" 정상 경로에 대응하는 예외 동작을 서술하므로 위임 성립."
+    },
+    {
+      "evaluation_id": "82080ccee12841da",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "리셋하여야 한다, 적용하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "08c8bbaba4d52512",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_SD_InitialDelay_Min, P_SD_InitialDelay_Max}, declared=[SRS-UID-dec119b739b5](SD-0003 소유, context_leaves), required=[SRS-UID-dec119b739b5] -> 다른 context leaf는 이 이름을 소유하지 않음, required==declared, 조건 6."
+    },
+    {
+      "evaluation_id": "1b237777d96f1903",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관."
+    },
+    {
+      "evaluation_id": "9c5bede20be910da",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "8797197b22e3e2f3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=mode_state. power-on 리셋 및 Initial Wait Phase 진입 시 상태별 지연 적용으로 While-상태 패턴에 부합."
+    },
+    {
+      "evaluation_id": "025e501d38211404",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-d1038ac62015: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 power-on 시 SD 상태 머신을 Initial Wait Ph...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "ca59380449221f02",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사 없음."
+    },
+    {
+      "evaluation_id": "13fcf53872f35bca",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 단일 트리거-동작 흐름만 담고 있어 분리 대상 아님."
+    },
+    {
+      "evaluation_id": "a6639481fb7967ae",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "매 Find 절차 개시시 대기 후 전송한다는 단일 동작만 서술, 자체 암시 하는 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "391e6ccc5d4ebc00",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "spec_pattern_type=nonfunctional로 면제 대상, 즉시 PASS (RE-TYPE-001 불일치와 별개로 frontmatter 선언값 기준 적용)."
+    },
+    {
+      "evaluation_id": "c0bf59641d3c8525",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "전송하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "4ccfc2b79e0afca1",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "parameter_definition:\n- name: P_SD_FindInitialDelay_Min\n  type: uint32\n  range: 0~1000\n  unit: ms\n  default: '100'\n- name: P_SD_FindInitialDelay_Max\n  type: uint32\n  range: 0~3000\n  unit: ms\n  default: '300'",
+      "location": "SRS-UID-f26b7f9795fc: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_SD_FindInitialDelay_Min, P_SD_FindInitialDelay_Max}(SD-0101 자체 정의), 본문은 {P_Name} 중괄호 문법으로 이 두 이름을 참조하지 않아 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과. 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-909832e4ca50(SD-0010, context, nonfunctional)와 SRS-UID-a92ae9773aae(SD-0102, leaves, mode_state)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "e52e56aa92bdcb3f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "의무 주체가 SOME/IP Service Discovery 기능으로 일관, 다른 모듈에 의무를 지우지 않음."
+    },
+    {
+      "evaluation_id": "b8317899cf3ed82e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어 'SOME/IP Service Discovery 기능'로 명시."
+    },
+    {
+      "evaluation_id": "716eecb457d5823b",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "nonfunctional",
+      "location": "SRS-UID-f26b7f9795fc: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=nonfunctional이지만 본문은 값/범위 제약(SCALE/METER/MUST 형 제약문, 예: \"Min을 Max 이하로 구성\")을 전혀 서술하지 않고, \"Service Find 절차를 개시할 때마다(트리거) ... 대기한 후 FindService를 전송하여야 한다(동작)\"라는 절차/행위 기술로, mode_state 또는 interface_comm의 핵심 형태(트리거→동작/전송)에 해당한다. 값 범위 제약은 SRS-SomeIP-ServiceDiscovery-0010이 이미 담당하고 있어, 이 leaf는 nonfunctional 핵심 형태를 충족하지 못한다.",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "aaf84f74c469311d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f26b7f9795fc: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — Find 절차 개시 트리거와 대기+전송 동작이 구체적이어 T/F 판정 가능."
+    },
+    {
+      "evaluation_id": "e910e3f83fa02fec",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사 없음, 공식이 구체적 수치."
+    },
+    {
+      "evaluation_id": "b0eff33681d5813e",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 단일 타이밍 공식만 서술해 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "5df880713d598bb6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "n회차 전송 간격 공식만 정의하는 단일 수치 규칙으로, 자체 서술이 암시하는 추가 분기 없음."
+    },
+    {
+      "evaluation_id": "fb98065cdde49730",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "spec_pattern_type=nonfunctional로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "f024f1d33e2654e8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "적용하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "b3489ea282b711a5",
+      "verdict": "FAIL",
+      "severity": null,
+      "evidence": "parameter_definition:\n- name: P_SD_FindRepetitionBaseDelay\n  type: uint32\n  range: 10~5000\n  unit: ms\n  default: '200'\n- name: P_SD_FindRepetitionMax\n  type: uint8\n  range: 0~10\n  unit: count\n  default: '3'",
+      "location": "SRS-UID-f422d5d47636: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0011 자체 정의), 본문은 두 이름 모두 자기 own에서만 참조하므로 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-631981184c37(SD-0116, leaves, mode_state)와 SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL. (이전 회차에서 context로 존재할 때 SD-0116/0115 측에서 같은 문제로 FAIL했고, SD-0011이 직접 target으로 승격된 이번 회차에는 SD-0011 자체도 동일 조건5로 FAIL.)",
+      "reason_code": "content_defect",
+      "actionability": "edit"
+    },
+    {
+      "evaluation_id": "6d23dbeb728bd276",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "의무 주체가 SOME/IP Service Discovery 기능으로 일관, 다른 모듈에 의무를 지우지 않음."
+    },
+    {
+      "evaluation_id": "e699da470b6acdf3",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어 'SOME/IP Service Discovery 기능'로 명시."
+    },
+    {
+      "evaluation_id": "2c48b458c3e6dec6",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=nonfunctional. n회차 전송 간격을 {BaseDelay} × 2^(n-1) 공식으로 규정하는 순수 타이밍/수치 제약으로 nonfunctional 핵심 형태에 부합."
+    },
+    {
+      "evaluation_id": "f9182bfda005d9cc",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f422d5d47636: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — n회차별 전송간격 공식이 구체적 수치식이어 T/F 검증 가능."
+    },
+    {
+      "evaluation_id": "f580b5e937cc7cb8",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준1 O — 주관적 부사/형용사(적절히, 빠르게, 필요시, 부드럽게 등)가 본문에 없으며 모든 조건이 구체적 값/상태로 진술됨."
+    },
+    {
+      "evaluation_id": "4bea68323239c425",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준4 O — 조건→동작(또는 시간적 흐름)으로 논리적으로 결합된 단일 핵심 의도만 담고 있어 분리 대상이 아님."
+    },
+    {
+      "evaluation_id": "17f0de0c502fa016",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "타임아웃 미완료 시의 판정과 통지를 자체에서 완결하는 범위의 요구사항으로 암시 분기 없음."
+    },
+    {
+      "evaluation_id": "a1520dc3e18a7a5f",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "spec_pattern_type=exception_fault로 면제 대상, 즉시 PASS."
+    },
+    {
+      "evaluation_id": "5f1b659fa33f24f7",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "판정하여 통지하여야 한다 의무 문장 존재."
+    },
+    {
+      "evaluation_id": "5e62355102496034",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: frontmatter.parameter_definition/mapped_parameter",
+      "rationale": "own={}, foreign={P_RM_ServiceRegister_Timeout}, declared=[SRS-UID-936d288733a4](0003 소유, input.leaves), required=[SRS-UID-936d288733a4] -> 일치, 조건 6."
+    },
+    {
+      "evaluation_id": "8fea9cf03ea30989",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "의무 주체 RM 소프트웨어로 일관, application은 통지 대상."
+    },
+    {
+      "evaluation_id": "3df6f13c5cc2c27d",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준2 O — 주어가 'SOME/IP Routing Management 소프트웨어'로 명시되어 구체적인 SW 컴포넌트를 가리킴(일반 '시스템'/'사용자'가 아님)."
+    },
+    {
+      "evaluation_id": "9646cf9d88c2db08",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: frontmatter.spec_pattern_type",
+      "rationale": "spec_pattern_type=exception_fault. 감지(타임아웃 내 미완료)→판정+보고(application 통지) 구조로 핵심 형태 충족."
+    },
+    {
+      "evaluation_id": "3ac6ae44d0cb7a08",
+      "verdict": "PASS",
+      "severity": null,
+      "evidence": null,
+      "location": "SRS-UID-f49e08b0fe13: ## Description",
+      "rationale": "[srs-clarity 위임 판정] 기준3 O — 'SOME/IP Routing Management 소프트웨어는 {P_RM_ServiceRegister_Timeout}ms 이내에...' 형태로 트리거/조건/동작이 구체적이어 구현물 테스트로 T/F 판정 가능."
+    }
+  ],
+  "execution_status": "SUCCEEDED",
+  "context_promotions": [
+    {
+      "context_leaf_uid": "SRS-UID-909832e4ca50",
+      "source_subject_type": "leaf",
+      "source_subject_key": "SRS-UID-f26b7f9795fc",
+      "affected_rule_ids": [
+        "RE-PARAMREF-001"
+      ],
+      "reason": "SD-0101/SD-0102(이번 회차 target)의 RE-PARAMREF-001 조건 5 위반을 유발한 SRS-SomeIP-ServiceDiscovery-0010(nonfunctional)이 동일한 P_SD_FindInitialDelay_Min/Max를 동일한 값으로 parameter_definition으로 소유하고 있다. 이번 회차에는 context로만 존재해 직접 판정되지 않았다. 세 leaf(SD-0010/0101/0102) 중 하나만 소유하도록 정리가 필요하다.",
+      "evidence": "parameter_definition:\n- name: P_SD_FindInitialDelay_Min\n  type: uint32\n  range: 0~1000\n  unit: ms\n  default: '100'\n- name: P_SD_FindInitialDelay_Max\n  type: uint32\n  range: 0~3000\n  unit: ms\n  default: '300'",
+      "action": "fresh_reassess"
+    }
+  ]
+}

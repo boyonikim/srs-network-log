@@ -1,0 +1,1213 @@
+{
+  "contract_version": 1,
+  "release": "runtime-no-readme-20261011",
+  "status": "OK",
+  "request": {
+    "query": "SOME/IP header byte size, Ethernet MTU 1500, IP/UDP overhead, SOME/IP-TP segmentation payload threshold for UDP",
+    "audience": "skill",
+    "purpose": "evidence",
+    "source_versions": {
+      "SOMEIP-PROTOCOL-SPEC": "R24-11"
+    }
+  },
+  "context": {
+    "platform": null,
+    "role": null,
+    "assessment": "not_automatically_verified"
+  },
+  "explanations": [],
+  "design_guidance": [],
+  "evidence_status": "OK",
+  "evidence": [
+    {
+      "claim_ref": "SOMEIP-K-0001#C2",
+      "claim_text": "The SOME/IP header Length field counts the bytes from the beginning of the Request ID to the end of the message. The total message length is Length + 8. For a basic message without additional headers, Length is 8 plus the payload byte count, and the total size is 16 plus the payload byte count.",
+      "kind": "behavior",
+      "applies_to": {
+        "conditions": [],
+        "platforms": [],
+        "roles": [],
+        "source_versions": [
+          {
+            "source_id": "SOMEIP-PROTOCOL-SPEC",
+            "version": "R24-11"
+          }
+        ],
+        "version_scope": "versioned"
+      },
+      "retrieval_method": "direct",
+      "sources": [
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00042",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.1.2.3 Length [32 Bit] / PRS_SOMEIP_00042",
+          "pdf_page": 19,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        }
+      ]
+    },
+    {
+      "claim_ref": "SOMEIP-K-0034#C1",
+      "claim_text": "All non-final TP segment-data lengths shall be multiples of 16 bytes. This counts segment payload bytes, excluding the SOME/IP and TP headers. A correctly aligned maximum segment-data length of 1392 bytes is recommended, not an unconditional maximum for every deployment.",
+      "kind": "behavior",
+      "applies_to": {
+        "conditions": [
+          "SOME/IP-TP sender."
+        ],
+        "platforms": [],
+        "roles": [],
+        "source_versions": [
+          {
+            "source_id": "SOMEIP-PROTOCOL-SPEC",
+            "version": "R24-11"
+          }
+        ],
+        "version_scope": "versioned"
+      },
+      "retrieval_method": "direct",
+      "sources": [
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00729",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00729",
+          "pdf_page": 62,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00730",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00730",
+          "pdf_page": 62,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        }
+      ]
+    },
+    {
+      "claim_ref": "SOMEIP-K-0034#C2",
+      "claim_text": "Senders shall segment only messages configured for segmentation and send segments in ascending order. Non-final segments shall have equal sizes, and the sender shall try to maximize segment size within specification limits.",
+      "kind": "behavior",
+      "applies_to": {
+        "conditions": [
+          "SOME/IP-TP sender."
+        ],
+        "platforms": [],
+        "roles": [],
+        "source_versions": [
+          {
+            "source_id": "SOMEIP-PROTOCOL-SPEC",
+            "version": "R24-11"
+          }
+        ],
+        "version_scope": "versioned"
+      },
+      "retrieval_method": "direct",
+      "sources": [
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00732",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00732",
+          "pdf_page": 65,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00733",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00733",
+          "pdf_page": 65,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00734",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00734",
+          "pdf_page": 65,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00735",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00735",
+          "pdf_page": 65,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        }
+      ]
+    },
+    {
+      "claim_ref": "SOMEIP-K-0033#C2",
+      "claim_text": "Each TP segment sets the Message Type TP flag and inserts a four-byte big-endian TP header immediately after the SOME/IP header. From high to low bits it contains a 28-bit Offset, three reserved bits and one More Segments bit.",
+      "kind": "behavior",
+      "applies_to": {
+        "conditions": [
+          "SOME/IP-TP over UDP."
+        ],
+        "platforms": [],
+        "roles": [],
+        "source_versions": [
+          {
+            "source_id": "SOMEIP-PROTOCOL-SPEC",
+            "version": "R24-11"
+          }
+        ],
+        "version_scope": "versioned"
+      },
+      "retrieval_method": "direct",
+      "sources": [
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00722",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00722",
+          "pdf_page": 60,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00723",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00723",
+          "pdf_page": 61,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00931",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.4 / PRS_SOMEIP_00931",
+          "pdf_page": 61,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        }
+      ]
+    },
+    {
+      "claim_ref": "SOMEIP-K-0029#C1",
+      "claim_text": "UDP binding carries SOME/IP messages in UDP packets and shall not prohibit UDP fragmentation. The recommended payload range is 0..1400 bytes; larger payloads should use TCP or segmentation rather than treating 1400 as an unconditional validity limit.",
+      "kind": "behavior",
+      "applies_to": {
+        "conditions": [],
+        "platforms": [],
+        "roles": [],
+        "source_versions": [
+          {
+            "source_id": "SOMEIP-PROTOCOL-SPEC",
+            "version": "R24-11"
+          }
+        ],
+        "version_scope": "versioned"
+      },
+      "retrieval_method": "direct",
+      "sources": [
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00137",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.1 / PRS_SOMEIP_00137",
+          "pdf_page": 55,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00139",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.2.1.1 / PRS_SOMEIP_00139",
+          "pdf_page": 55,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        },
+        {
+          "source_id": "SOMEIP-PROTOCOL-SPEC",
+          "source_version": "R24-11",
+          "excerpt_id": "AUTOSAR-696-R24-11-PRS_SOMEIP_00382",
+          "excerpt_text": null,
+          "text_availability": "withheld",
+          "locator": "4.1.2.9 / PRS_SOMEIP_00382",
+          "pdf_page": 25,
+          "source_title": "SOME/IP Protocol Specification (AUTOSAR Foundation, Document ID 696)",
+          "source_nature": "normative"
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "reference_evidence": [],
+  "reference_routes": [
+    {
+      "id": "ROUTE-RFC8899-COMMON",
+      "title": "Datagram packet size and PMTU reference",
+      "search_aliases": [
+        "DPLPMTUD PMTU MTU datagram probe size",
+        "큰 메시지 크기 단편화 경로 MTU"
+      ],
+      "source_id": "IETF-RFC-8899",
+      "version": "8899",
+      "claim_refs": [
+        "RFC8899-SIZE-001#C1",
+        "RFC8899-SIZE-001#C2",
+        "RFC8899-SIZE-001#C3"
+      ],
+      "normative_evidence": false,
+      "scope": "Selected base-edition sections only. Choose the edition explicitly. Informational RFC4541 recommendations and conditional RFC8899 DPLPMTUD rules do not establish product capabilities."
+    },
+    {
+      "id": "ROUTE-SD-R22",
+      "title": "R22-11 SOME/IP-SD message and reboot rules",
+      "search_aliases": [
+        "SD",
+        "SOME/IP-SD",
+        "Service Discovery",
+        "Reboot",
+        "Session ID",
+        "재부팅",
+        "서비스 검색",
+        "TTL",
+        "option run",
+        "StopOffer",
+        "Subscribe",
+        "구독",
+        "Initial Wait",
+        "Repetition",
+        "구독 만료",
+        "시작",
+        "CYCLIC_OFFER_DELAY",
+        "초기 이벤트",
+        "재구독",
+        "Nack",
+        "Ack 미수신",
+        "Endpoint",
+        "multicast",
+        "중복 이벤트",
+        "잘못된 SD",
+        "discardable",
+        "malformed",
+        "옵션 검사"
+      ],
+      "source_id": "SOMEIP-SD-SPEC",
+      "version": "R22-11",
+      "claim_refs": [
+        "SOMEIP-SD-2201#C1",
+        "SOMEIP-SD-2201#C4",
+        "SOMEIP-SD-2202#C1",
+        "SOMEIP-SD-2203#C1",
+        "SOMEIP-SD-2204#C1",
+        "SOMEIP-SD-2204#C4",
+        "SOMEIP-SD-2205#C2",
+        "SOMEIP-SD-2205#C4",
+        "SOMEIP-SD-2206#C1",
+        "SOMEIP-SD-2206#C3",
+        "SOMEIP-SD-2207#C1",
+        "SOMEIP-SD-2207#C3",
+        "SOMEIP-SD-2208#C1",
+        "SOMEIP-SD-2209#C1"
+      ],
+      "normative_evidence": false,
+      "scope": "R22-11 reference only. Select the edition explicitly; not complete SD behavior or product recovery approval."
+    },
+    {
+      "id": "ROUTE-RFC8200",
+      "title": "IPv6 UDP MTU and checksum",
+      "source_id": "IETF-RFC-8200",
+      "version": "8200",
+      "claim_refs": [
+        "RFC8200-AP-001#C1",
+        "RFC8200-AP-001#C2"
+      ],
+      "search_aliases": [
+        "IPv6",
+        "MTU",
+        "zero checksum"
+      ],
+      "normative_evidence": false,
+      "scope": "Bounded base-edition references; select editions explicitly, preserve required errata/context, and validate actual OS and product applicability."
+    }
+  ],
+  "content_roles": {
+    "SOMEIP-K-0001#C2": {
+      "primary_role": "protocol_knowledge",
+      "secondary_roles": [],
+      "basis": "content_review",
+      "rationale": "Defines SOME/IP wire, serialization, binding, interface or application-interaction semantics for Header and Length calculation. Source edition and claim conditions remain required."
+    },
+    "SOMEIP-K-0034#C1": {
+      "primary_role": "protocol_knowledge",
+      "secondary_roles": [],
+      "basis": "content_review",
+      "rationale": "Defines SOME/IP wire, serialization, binding, interface or application-interaction semantics for SOME/IP-TP sender segmentation rules. Source edition and claim conditions remain required."
+    },
+    "SOMEIP-K-0034#C2": {
+      "primary_role": "protocol_knowledge",
+      "secondary_roles": [],
+      "basis": "content_review",
+      "rationale": "Defines SOME/IP wire, serialization, binding, interface or application-interaction semantics for SOME/IP-TP sender segmentation rules. Source edition and claim conditions remain required."
+    },
+    "SOMEIP-K-0033#C2": {
+      "primary_role": "protocol_knowledge",
+      "secondary_roles": [],
+      "basis": "content_review",
+      "rationale": "Defines SOME/IP wire, serialization, binding, interface or application-interaction semantics for SOME/IP-TP header and segment identity. Source edition and claim conditions remain required."
+    },
+    "SOMEIP-K-0029#C1": {
+      "primary_role": "protocol_knowledge",
+      "secondary_roles": [],
+      "basis": "content_review",
+      "rationale": "Defines SOME/IP wire, serialization, binding, interface or application-interaction semantics for UDP binding and multicast eventgroups. Source edition and claim conditions remain required."
+    }
+  },
+  "evidence_roles": {
+    "SOMEIP-K-0001#C2": "protocol_knowledge",
+    "SOMEIP-K-0034#C1": "protocol_knowledge",
+    "SOMEIP-K-0034#C2": "protocol_knowledge",
+    "SOMEIP-K-0033#C2": "protocol_knowledge",
+    "SOMEIP-K-0029#C1": "protocol_knowledge"
+  },
+  "review_state": "project_applicability_unverified",
+  "source_gaps": [
+    {
+      "id": "GAP-IP",
+      "title": "Internet protocol foundations",
+      "issuer_url": "https://www.rfc-editor.org/",
+      "required_project_input": "Applicable RFC editions/updates, IPv4/IPv6 use, addressing, routing and multicast configuration",
+      "search_aliases": [
+        "ARP",
+        "NDP",
+        "IPv4",
+        "TCP",
+        "UDP",
+        "DHCP",
+        "IGMP",
+        "MLD",
+        "multicast",
+        "멀티캐스트"
+      ],
+      "status": "acquired_pending_review",
+      "reason": "RFC768 base, RFC9868 option/error/reassembly boundaries and official errata 8834 (Verified) / 8708 (Held for Document Update) reviewed. Selected RFC1122 IPv4/ICMP/checksum, RFC1112 multicast, RFC2131 DHCP lifecycle and RFC8085 burst/environment sections added. Full current update chains, IGMP/MLD versions and product stack behavior remain separate reviews. Hash identifies RFC9293. Selected RFC4541 IPv4 snooping and RFC8899 datagram sizing/probe prerequisites added on 2026-10-07. Full IGMP/MLD and PMTUD coverage remains open; this does not close the broad gap. Five selected RFC9776 IPv4 membership/query/timer/compatibility claims added on 2026-10-07; full filter transitions, parser/security and MLDv2 remain pending. RFC826 address resolution and RFC5227 probing/announcement/defense are now covered by six scoped claims; complete update-chain semantics, cache policy and Proxy ARP remain excluded.",
+      "source_sha256": "6d9ac8be4b0286f8c3d337addf442b2eb6a9b14e1366594ea7fbc273f93dc2d9",
+      "reviewed_sections": [],
+      "owner_role": "domain maintainer with OS/network specialist",
+      "attempted_url": "https://www.rfc-editor.org/rfc/rfc9293.txt",
+      "attempt_date": "2026-10-04"
+    },
+    {
+      "id": "GAP-MIDDLEWARE",
+      "title": "SOME/IP implementation and integration",
+      "issuer_url": "https://github.com/COVESA/vsomeip",
+      "required_project_input": "Selected implementation/vendor and version, serialization generator, configuration, thread model and IPC boundary",
+      "search_aliases": [
+        "vsomeip",
+        "middleware",
+        "미들웨어",
+        "SOME/IP 구현체"
+      ],
+      "status": "acquired_pending_review",
+      "reason": "Two bounded reference claims reviewed from COVESA-VSOMEIP-README 3.5.8. Broad implementation/API and product applicability review remains pending. No cross-OS equivalence or automatic project baseline. See docs/ingestion/remaining-work-review.md.",
+      "source_sha256": "6dbd2606026dabe9299dda3132dbcbf6cfffb844bc6c0bdc9805ed56e3cad206",
+      "reviewed_sections": [],
+      "owner_role": "domain maintainer with OS/network specialist"
+    },
+    {
+      "id": "GAP-SD",
+      "title": "Available SOME/IP-SD editions: semantic review",
+      "issuer_url": "https://www.autosar.org/standards/foundation",
+      "required_project_input": "Applicable SOME/IP-SD edition, middleware version, client/server role and peer interoperability baseline; AP means Application Processor",
+      "search_aliases": [
+        "service",
+        "discovery",
+        "SD",
+        "서비스",
+        "검색",
+        "구독"
+      ],
+      "status": "acquired_pending_review",
+      "reason": "R22/R23 state prose and rendered diagrams compared, with 90 transition records indexed and unresolved discrepancies retained. Multicast option roles reviewed in both editions; initial-event applicability remains unresolved. R24 RS summaries map all 25 active requirements. These are bounded reviews, not complete independent semantic or product coverage. AUTOSAR official errata verification remains blocked by 503. Matching R22/R23 user attachments reacquired on 2026-10-07. Nine R23 claims now cover bounded renewal/reboot, initial events, missing Ack, transport/Nack, local Ack acceptance, StopOffer and multicast expiry. The 00449 edition change is explicit; first-receive initialization and complete unicast/adaptive state remain pending. Follow-up reviewed R23 distinct-endpoint threshold counting, bounded unicast behavior and configured Subscribe retries; adaptive diagram omissions remain a source issue, not a complete executable model.",
+      "source_sha256": "9e3df1b68f6fb449bd165d9e950cb59a6bac3603a6ed81caf0d5123b11ed4617",
+      "reviewed_sections": [],
+      "owner_role": "domain maintainer with project specialist",
+      "attempted_url": "https://www.autosar.org/fileadmin/standards/R24-11/FO/AUTOSAR_FO_PRS_SOMEIPServiceDiscoveryProtocol.pdf",
+      "attempt_date": "2026-10-04",
+      "blocker": "Source semantic review and project edition selection remain; do not wait for an unverified R24-11 PRS publication. A 503 at a candidate URL establishes neither publication nor absence."
+    }
+  ],
+  "available_source_versions": [
+    {
+      "source_id": "ANDROID-ETHERNET",
+      "version": "snapshot-2026-09-24"
+    },
+    {
+      "source_id": "AUTOSAR-CP-SOMEIP-TP",
+      "version": "R22-11"
+    },
+    {
+      "source_id": "AUTOSAR-CP-SOMEIP-TRANSFORMER",
+      "version": "R22-11"
+    },
+    {
+      "source_id": "AUTOSAR-CP-SOMEIP-TRANSFORMER",
+      "version": "R24-11"
+    },
+    {
+      "source_id": "COVESA-VSOMEIP-README",
+      "version": "3.5.8"
+    },
+    {
+      "source_id": "IEEE-802.1AS",
+      "version": "2025"
+    },
+    {
+      "source_id": "IEEE-802.1Q",
+      "version": "2022"
+    },
+    {
+      "source_id": "IEEE-802.3",
+      "version": "2022"
+    },
+    {
+      "source_id": "IETF-RFC-1112",
+      "version": "1112"
+    },
+    {
+      "source_id": "IETF-RFC-1122",
+      "version": "1122"
+    },
+    {
+      "source_id": "IETF-RFC-2131",
+      "version": "2131"
+    },
+    {
+      "source_id": "IETF-RFC-3290",
+      "version": "3290"
+    },
+    {
+      "source_id": "IETF-RFC-4291",
+      "version": "4291"
+    },
+    {
+      "source_id": "IETF-RFC-4363",
+      "version": "4363"
+    },
+    {
+      "source_id": "IETF-RFC-4541",
+      "version": "4541"
+    },
+    {
+      "source_id": "IETF-RFC-4861",
+      "version": "4861"
+    },
+    {
+      "source_id": "IETF-RFC-4862",
+      "version": "4862"
+    },
+    {
+      "source_id": "IETF-RFC-5227",
+      "version": "5227"
+    },
+    {
+      "source_id": "IETF-RFC-768",
+      "version": "768"
+    },
+    {
+      "source_id": "IETF-RFC-8085",
+      "version": "8085"
+    },
+    {
+      "source_id": "IETF-RFC-8200",
+      "version": "8200"
+    },
+    {
+      "source_id": "IETF-RFC-826",
+      "version": "826"
+    },
+    {
+      "source_id": "IETF-RFC-8899",
+      "version": "8899"
+    },
+    {
+      "source_id": "IETF-RFC-9293",
+      "version": "9293"
+    },
+    {
+      "source_id": "IETF-RFC-9776",
+      "version": "9776"
+    },
+    {
+      "source_id": "IETF-RFC-9777",
+      "version": "9777"
+    },
+    {
+      "source_id": "IETF-RFC-9868",
+      "version": "9868"
+    },
+    {
+      "source_id": "IETF-RFC-9868-ERRATA",
+      "version": "snapshot-2026-10-05"
+    },
+    {
+      "source_id": "LINUX-DEVLINK-HEALTH",
+      "version": "6.6.0"
+    },
+    {
+      "source_id": "LINUX-IP-SYSCTL",
+      "version": "6.6.0"
+    },
+    {
+      "source_id": "LINUX-NET-STATISTICS",
+      "version": "6.6.0"
+    },
+    {
+      "source_id": "LINUX-NETWORK-SCALING",
+      "version": "6.6.0"
+    },
+    {
+      "source_id": "LINUX-OPERSTATES",
+      "version": "6.6.0"
+    },
+    {
+      "source_id": "OPEN-ALLIANCE-TC10",
+      "version": "2.0"
+    },
+    {
+      "source_id": "OPEN-ALLIANCE-TC8-L3-7",
+      "version": "3.0"
+    },
+    {
+      "source_id": "QNX-IO-SOCK",
+      "version": "8.0"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b01"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b02"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b03"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b04"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b05"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b06"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b07"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b08"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b09"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b10"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b11"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b12"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b13"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b14"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b15"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b16"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b17"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b18"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b19"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b20"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b21"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b22"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b23"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b24"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b25"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b26"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b27"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b28"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b29"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b30"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b31"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b32"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b33"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b34"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b35"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b36"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b37"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b38"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b39"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b40"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b43"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b46"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b47"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b48"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b53"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b54"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b55"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-body-2026-10-06-b56"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-html-2026-10-06"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-libc-html-2026-10-06"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-web-2026-10-06"
+    },
+    {
+      "source_id": "QNX-SDP-DOCSET",
+      "version": "8.0-web-2026-10-06-r2"
+    },
+    {
+      "source_id": "SOMEIP-PROTOCOL-SPEC",
+      "version": "R24-11"
+    },
+    {
+      "source_id": "SOMEIP-SD-REQUIREMENTS",
+      "version": "R24-11"
+    },
+    {
+      "source_id": "SOMEIP-SD-SPEC",
+      "version": "R22-11"
+    },
+    {
+      "source_id": "SOMEIP-SD-SPEC",
+      "version": "R23-11"
+    },
+    {
+      "source_id": "WIRESHARK-CHECKSUMS",
+      "version": "snapshot-2026-10-07"
+    },
+    {
+      "source_id": "WIRESHARK-TIMESTAMPS",
+      "version": "snapshot-2026-10-07"
+    }
+  ],
+  "required_actions": [
+    "Check each evidence applicability condition against the project; context fields do not prove applicability.",
+    "Acquire and review applicable missing sources before using unsupported domain conclusions.",
+    "Expert records are non-normative review patterns or scoped observations; retain their provenance, review state and missing project inputs. Retrieve any supporting_claim_refs absent from the evidence bundle with explicit source editions before using them as evidence."
+  ],
+  "presentation": "Preserve evidence, conditions, exceptions and unresolved issues.",
+  "limitations": [
+    {
+      "reason": "original_text_withheld",
+      "excerpt_ids": [
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00042",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00137",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00139",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00382",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00722",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00723",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00729",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00730",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00732",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00733",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00734",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00735",
+        "AUTOSAR-696-R24-11-PRS_SOMEIP_00931"
+      ]
+    },
+    {
+      "reason": "knowledge_only",
+      "detail": "No SRS authoring, approval, Codebeamer upload, code generation or ECU execution is performed."
+    },
+    {
+      "reason": "lexical_navigation",
+      "detail": "Topics are lexical matches; relevance is not semantic entailment. Concept explanations and design recommendations are not normative evidence."
+    }
+  ],
+  "consumer_contract": {
+    "retain_fields": [
+      "evidence_status",
+      "evidence",
+      "reference_evidence",
+      "evidence_roles",
+      "content_roles",
+      "issues",
+      "review_state",
+      "context",
+      "required_actions",
+      "limitations",
+      "expert_knowledge",
+      "consumer_guidance",
+      "retrieval_breakdown"
+    ],
+    "automatic_normative_approval": false
+  },
+  "expert_knowledge": [
+    {
+      "id": "EXPERT-MESSAGE-SIZE",
+      "title": "Large SOME/IP messages and datagram path limits",
+      "search_aliases": [
+        "large SOMEIP UDP payload MTU PMTU fragmentation segmentation TP",
+        "큰 SOMEIP 메시지만 실패 UDP 크기 MTU PMTU 단편화 재조립"
+      ],
+      "kind": "engineering_guidance",
+      "normative_evidence": false,
+      "review": {
+        "state": "curated",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "provenance": {
+        "kind": "existing_guidance",
+        "references": [
+          "references/production-design-reviews.json#DESIGN-02"
+        ]
+      },
+      "applies_when": [
+        "Product-independent design, diagnosis and test planning for the stated vehicle Ethernet/SOME/IP scenario.",
+        "Select source editions and relevant capabilities before deriving implementation-specific conclusions."
+      ],
+      "does_not_establish": [
+        "No product requirement, standard obligation, field incident or executed test is asserted.",
+        "Source claims and their exceptions must be retrieved separately with explicit editions."
+      ],
+      "project_inputs": [
+        "Transport and IP family, serialized size, header overhead, TP support, reassembly limits, path constraints and actual PMTU mechanism."
+      ],
+      "summary": "Separate serialization size, SOME/IP-TP segmentation, IP fragmentation and path-MTU limits.",
+      "rationale": "Each layer has different headers, limits and failure observations; successful small traffic does not identify the failing layer.",
+      "alternatives": [
+        "Use an explicitly bounded message size consistent with the selected path and protocol.",
+        "Use supported segmentation or another transport after reviewing semantics; DPLPMTUD is conditional and not mandatory for SOME/IP."
+      ],
+      "failure_modes": [
+        "Payload size is confused with full IP packet size.",
+        "SOME/IP-TP is mistaken for IP fragmentation.",
+        "Probe loss due to congestion is diagnosed as certain MTU failure.",
+        "A sender API success is treated as remote reception."
+      ],
+      "srs_guidance": [
+        "Define size limits at named layer boundaries and oversize behavior.",
+        "Specify only implemented discovery/segmentation capabilities and keep budgets configurable."
+      ],
+      "test_guidance": {
+        "preconditions": [
+          "Transport and IP family, serialized size, header overhead, TP support, reassembly limits, path constraints and actual PMTU mechanism."
+        ],
+        "stimulus": [
+          "Sweep sizes around configured boundaries; vary path MTU and PTB visibility in an isolated test; separately vary TP reassembly capacity."
+        ],
+        "observations": [
+          "Capture serialized and wire sizes, TP offsets/session, fragment metadata, PTB/probe feedback and receiver dispatch."
+        ],
+        "oracle": [
+          "Classify the first failed boundary using receiver evidence; do not infer PMTU solely from a lost packet or assume any DPLPMTUD support."
+        ],
+        "cleanup": [
+          "Stop fault injection, restore normal communication and verify resource/state recovery before the next case."
+        ]
+      },
+      "diagnostic_steps": [
+        "Identify transport, TP usage and actual encoded size.",
+        "Subtract applicable overhead at each layer.",
+        "Compare small and large delivery with receiver/reassembly observations before selecting a cause."
+      ],
+      "supporting_claim_refs": [
+        "SOMEIP-K-0029#C1",
+        "SOMEIP-K-0034#C1",
+        "SOMEIP-K-0035#C3",
+        "RFC8899-SIZE-001#C1",
+        "RFC8899-SIZE-001#C2",
+        "RFC8899-SIZE-001#C3"
+      ],
+      "experience": null,
+      "distribution": "redistributable"
+    },
+    {
+      "id": "EXPERT-TCP-FRAMING",
+      "title": "TCP stream and SOME/IP message boundaries",
+      "search_aliases": [
+        "TCP framing stream partial coalesced read messages",
+        "TCP 수신 메시지 경계 나뉘어 합쳐져 분할 헤더 길이"
+      ],
+      "kind": "engineering_guidance",
+      "normative_evidence": false,
+      "review": {
+        "state": "curated",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "provenance": {
+        "kind": "existing_guidance",
+        "references": [
+          "references/production-design-reviews.json#DESIGN-02"
+        ]
+      },
+      "applies_when": [
+        "Product-independent design, diagnosis and test planning for the stated vehicle Ethernet/SOME/IP scenario.",
+        "Select source editions and relevant capabilities before deriving implementation-specific conclusions."
+      ],
+      "does_not_establish": [
+        "No product requirement, standard obligation, field incident or executed test is asserted.",
+        "Source claims and their exceptions must be retrieved separately with explicit editions."
+      ],
+      "project_inputs": [
+        "Selected SOME/IP edition, header/length interpretation, parser state, configured size/resource limits and connection-close policy."
+      ],
+      "summary": "Parse SOME/IP message boundaries independently of TCP read and segment boundaries.",
+      "rationale": "TCP does not preserve application write boundaries; parsing and buffering require explicit size and lifecycle handling.",
+      "alternatives": [
+        "Accumulate a bounded header and body before dispatch.",
+        "Use an incremental parser with explicit incomplete-message ownership and bounded retention."
+      ],
+      "failure_modes": [
+        "One read is treated as one message.",
+        "Split headers or multiple messages in one read cause truncation or extra dispatch.",
+        "An untrusted length allocates unbounded memory."
+      ],
+      "srs_guidance": [
+        "Specify complete-message validation and partial-input handling without assuming TCP segment boundaries.",
+        "Keep buffering limits and incomplete-input deadlines as inputs."
+      ],
+      "test_guidance": {
+        "preconditions": [
+          "Selected SOME/IP edition, header/length interpretation, parser state, configured size/resource limits and connection-close policy."
+        ],
+        "stimulus": [
+          "Split headers and bodies at different boundaries, coalesce messages and close mid-message; include malformed length cases."
+        ],
+        "observations": [
+          "Record received bytes, parser state, memory usage, dispatch order/count and close behavior."
+        ],
+        "oracle": [
+          "For the same valid byte stream, parsing yields the same ordered messages across chunk boundaries; malformed/close outcomes follow selected rules and policy."
+        ],
+        "cleanup": [
+          "Stop fault injection, restore normal communication and verify resource/state recovery before the next case."
+        ]
+      },
+      "diagnostic_steps": [
+        "Reconstruct the ordered stream before comparing framing.",
+        "Check Length arithmetic and buffering across calls.",
+        "Separate wire capture segmentation from application read boundaries."
+      ],
+      "supporting_claim_refs": [
+        "RFC9293-RECOVERY-001#C1",
+        "SOMEIP-K-0028#C1",
+        "SOMEIP-K-0001#C2",
+        "SOMEIP-K-0030#C1"
+      ],
+      "experience": null,
+      "distribution": "redistributable"
+    },
+    {
+      "id": "EXPERT-PARSER",
+      "title": "Malformed input and bounded resources",
+      "search_aliases": [
+        "malformed length payload parser buffer",
+        "잘못된 길이 페이로드 파서 버퍼 경계값",
+        "오류 패킷 응답 폐기 malformed packet respond discard"
+      ],
+      "kind": "engineering_guidance",
+      "normative_evidence": false,
+      "review": {
+        "state": "curated",
+        "reviewer": null,
+        "reviewed_on": null
+      },
+      "provenance": {
+        "kind": "existing_guidance",
+        "references": [
+          "references/production-design-reviews.json#DESIGN-02"
+        ]
+      },
+      "applies_when": [
+        "Use as a review pattern for input validation and memory safety.",
+        "Select actual platform, middleware, peer and source editions before deriving product behavior."
+      ],
+      "does_not_establish": [
+        "No product requirement, standard obligation, field incident or executed test is asserted.",
+        "Source claims and their exceptions must be retrieved separately with explicit editions."
+      ],
+      "project_inputs": [
+        "Serialization schema, integer widths, maximum sizes, allocator policy and applicable error-response rules."
+      ],
+      "summary": "Review wire lengths, serialization rules and allocation bounds together; preserve protocol-specific error suppression.",
+      "rationale": "A malformed message can exercise parsing, resource ownership and response behavior simultaneously.",
+      "alternatives": [
+        "Reject before allocation where the selected protocol permits.",
+        "Use bounded parsing with explicit ownership and cleanup."
+      ],
+      "failure_modes": [
+        "Length overflow or inconsistent nested lengths.",
+        "Unbounded allocation or repeated invalid-message resource retention.",
+        "An error response is sent where the protocol suppresses it."
+      ],
+      "srs_guidance": [
+        "Specify validation condition, affected message scope and observable action.",
+        "Separate protocol obligations from project buffer and overload limits."
+      ],
+      "test_guidance": {
+        "preconditions": [
+          "Select protocol edition, serialization settings, limits and receiver role."
+        ],
+        "stimulus": [
+          "Exercise minimum, maximum and adjacent invalid values; repeat malformed traffic under controlled load."
+        ],
+        "observations": [
+          "Capture response/suppression, parser outcome, memory/queue occupancy and subsequent valid-message processing."
+        ],
+        "oracle": [
+          "Compare to scoped claims and product limits, including allowed alternatives; silence alone does not prove correct rejection."
+        ],
+        "cleanup": [
+          "Release test-owned resources and confirm normal traffic recovery."
+        ]
+      },
+      "diagnostic_steps": [
+        "Compare declared lengths with captured bytes and configured serialization.",
+        "Separate malformed traffic handling from capture loss or a stalled receiver."
+      ],
+      "supporting_claim_refs": [
+        "SOMEIP-K-0041#C1",
+        "SOMEIP-K-0041#C2",
+        "SOMEIP-K-0028#C1"
+      ],
+      "experience": null,
+      "distribution": "redistributable"
+    }
+  ],
+  "consumer_guidance": {
+    "consumer": "srs",
+    "classification": "authoring_guidance",
+    "normative_evidence": false,
+    "required_fields": [
+      "requirement_id",
+      "revision",
+      "stakeholder_trace",
+      "allocation",
+      "actor",
+      "trigger",
+      "preconditions",
+      "observable_response",
+      "modality",
+      "parameters_with_units_and_origin",
+      "source_claim_refs",
+      "rationale",
+      "verification_method",
+      "open_issues"
+    ],
+    "review_checks": [
+      "Use one independently verifiable outcome per requirement.",
+      "Preserve shall/should/may and response-suppression exceptions.",
+      "A stronger project decision needs its own rationale and approval, not a rewritten source citation."
+    ],
+    "obligations": [
+      "Retain the complete evidence bundle, source editions, conditions, issues and release identity.",
+      "Separate source obligations, engineering recommendations, project decisions and observations.",
+      "Do not treat this handoff as product approval, ASPICE assessment evidence or an executed test."
+    ],
+    "project_inputs": [
+      "Transport and IP family, serialized size, header overhead, TP support, reassembly limits, path constraints and actual PMTU mechanism.",
+      "Selected SOME/IP edition, header/length interpretation, parser state, configured size/resource limits and connection-close policy.",
+      "Serialization schema, integer widths, maximum sizes, allocator policy and applicable error-response rules."
+    ],
+    "expert_record_ids": [
+      "EXPERT-MESSAGE-SIZE",
+      "EXPERT-TCP-FRAMING",
+      "EXPERT-PARSER"
+    ],
+    "source_issue_refs": [],
+    "automatic_approval": false
+  },
+  "retrieval_breakdown": {
+    "question": {
+      "status": "OK",
+      "claim_refs": [
+        "SOMEIP-K-0001#C2",
+        "SOMEIP-K-0034#C1",
+        "SOMEIP-K-0034#C2",
+        "SOMEIP-K-0033#C2",
+        "SOMEIP-K-0029#C1"
+      ],
+      "limitations": [
+        {
+          "reason": "original_text_withheld",
+          "excerpt_ids": [
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00042",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00137",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00139",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00382",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00722",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00723",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00729",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00730",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00732",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00733",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00734",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00735",
+            "AUTOSAR-696-R24-11-PRS_SOMEIP_00931"
+          ]
+        }
+      ]
+    },
+    "supporting_lookups": [],
+    "evidence_lane": "evidence",
+    "applicability": "not_automatically_verified"
+  }
+}

@@ -1,0 +1,1719 @@
+{
+  "task_id": "review-re-p2",
+  "revision": 1,
+  "kind": "review-re",
+  "instructions_path": "agents/re-reviewer.md",
+  "input": {
+    "leaves": [
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0048.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0063.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0086.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0045.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0057.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0016.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0052.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0087.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0079.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0051.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0072.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0088.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0019.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0073.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0074.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0018.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0041.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0071.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0006.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0056.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0012.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0048.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0013.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0020.md"
+    ],
+    "request_context": {
+      "restrictions": [],
+      "domains": [
+        "someip"
+      ]
+    },
+    "candidate_leaves": [
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0006.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0012.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0013.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0016.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0018.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0019.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0020.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0041.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0048.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0051.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0052.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0056.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0057.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0071.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0072.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0073.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0074.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0079.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0086.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0087.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0088.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0045.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0048.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0063.md"
+    ],
+    "context_leaves": [
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0047.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0049.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0081.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0113.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0114.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0002.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0044.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0076.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0112.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0061.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0008.md",
+      "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0029.md"
+    ],
+    "dispatch_plan": {
+      "schema_version": "review-cache-v1",
+      "axis": "requirements-engineering",
+      "mode": "fresh",
+      "review_reuse_policy": "force_full_review",
+      "entries": [
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-4aa54bece4a9",
+          "leaf_uid": "SRS-UID-4aa54bece4a9",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-4aa54bece4a9"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0048.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "566f989370b18e87b9a4f432430d23cb889a5c788a5046541bd06e7852f56d84",
+            "dependency_context": "d564be039b146b568cb4831f452408063c28a5c1f4f8f7a76a4e9d814f215a62",
+            "evaluation_context": "cf5ef032f55ad8ab74add4b2cbe09e5e760752ab3eb6719a385a593ba1d0e55f",
+            "evaluation_subject": "566f989370b18e87b9a4f432430d23cb889a5c788a5046541bd06e7852f56d84"
+          },
+          "dependency_context": {
+            "SRS-UID-08e7228197cf": "000ee2caeb31784ce2ba2cc093e19c83bfdbddc72c1a98c9196cedd166a8c6a5",
+            "SRS-UID-5455aee01afe": "80b5d39d53320e3f74374b1fc8cdc5b058283a04139d86a67ad64205164a4232",
+            "SRS-UID-90652d5d7aa3": "5217981299e34196fec09964db30127c4b3d53422dcecae1f9ca5f783c483c1f",
+            "SRS-UID-c370f3e3e3fe": "9a0e213900ff56961f7942ed2159a06d7e022efff76a7abed449d5dc6ab1c6a4"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "a9e321f700fb67ad",
+            "RE-ATOMIC-001": "a592fff88719d124",
+            "RE-COMPLETE-001": "cd360a70a62aa6ed",
+            "RE-EXCEPT-001": "cf786a889e93b433",
+            "RE-FORM-001": "288da6cc7e82f280",
+            "RE-PARAMREF-001": "cc8ca995be0c09d4",
+            "RE-RESP-001": "cf69152b3309b598",
+            "RE-SUBJECT-001": "9050306762cda130",
+            "RE-TYPE-001": "050e2ecb9a00ecef",
+            "RE-VERIFY-001": "d6e776e97aeb253e"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-54ac7aca6d5c",
+          "leaf_uid": "SRS-UID-54ac7aca6d5c",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-54ac7aca6d5c"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0063.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "9525f1d491dde7b89542601c82974a5dd50584a5ce54e0f735c4de3f24899e6e",
+            "dependency_context": "20ef6099205f6a714fd558bf93a5dff37b4e371ffd201283e9333ba707b7dd6c",
+            "evaluation_context": "61c6df6427a1fe0a5d2ba5e6d3fd7f8ce0059b6028365547f9e075bc4e70ace1",
+            "evaluation_subject": "9525f1d491dde7b89542601c82974a5dd50584a5ce54e0f735c4de3f24899e6e"
+          },
+          "dependency_context": {
+            "SRS-UID-4aa54bece4a9": "566f989370b18e87b9a4f432430d23cb889a5c788a5046541bd06e7852f56d84",
+            "SRS-UID-90652d5d7aa3": "5217981299e34196fec09964db30127c4b3d53422dcecae1f9ca5f783c483c1f",
+            "SRS-UID-969365985a84": "1169fcc6e900b5e1c06981fcdff1424e6415dd8a7864555e9b9968dd60b9b0d9"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "20d4e036849f498b",
+            "RE-ATOMIC-001": "975def888b7cdcef",
+            "RE-COMPLETE-001": "70f8a9437114752b",
+            "RE-EXCEPT-001": "16de7b7f4415f2c5",
+            "RE-FORM-001": "8637ba1589f6a306",
+            "RE-PARAMREF-001": "75e01355322343b1",
+            "RE-RESP-001": "5655e10369a4a60f",
+            "RE-SUBJECT-001": "fe50c77503c7fcd3",
+            "RE-TYPE-001": "ecd5934f596e2fcb",
+            "RE-VERIFY-001": "33b7639d9aa1a708"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-70eb93a1b2b5",
+          "leaf_uid": "SRS-UID-70eb93a1b2b5",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-70eb93a1b2b5"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0086.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "fab61fcef8dd159c8d536f6112a995892a219e68699110a285b3047667473e17",
+            "dependency_context": "c0e9fc2cbe87535cd19c45d352235a602ed70a78410177a8ce6ba801285e0521",
+            "evaluation_context": "ac6d0dc4cfdbe978ba994138aa6f9bfc9c551240b54edca9a647bfbef3475543",
+            "evaluation_subject": "fab61fcef8dd159c8d536f6112a995892a219e68699110a285b3047667473e17"
+          },
+          "dependency_context": {
+            "SRS-UID-4aa54bece4a9": "566f989370b18e87b9a4f432430d23cb889a5c788a5046541bd06e7852f56d84",
+            "SRS-UID-54ac7aca6d5c": "9525f1d491dde7b89542601c82974a5dd50584a5ce54e0f735c4de3f24899e6e",
+            "SRS-UID-90652d5d7aa3": "5217981299e34196fec09964db30127c4b3d53422dcecae1f9ca5f783c483c1f"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "5644216737849807",
+            "RE-ATOMIC-001": "adeb97d1536873a7",
+            "RE-COMPLETE-001": "b932833345257f72",
+            "RE-EXCEPT-001": "e111b069f7f5272a",
+            "RE-FORM-001": "724780cb0ac535f7",
+            "RE-PARAMREF-001": "9745d2a6ac86d55d",
+            "RE-RESP-001": "d772fb5e32c45658",
+            "RE-SUBJECT-001": "cb545b4bdda643ab",
+            "RE-TYPE-001": "c4636734570e11c9",
+            "RE-VERIFY-001": "517f32743f9c79d9"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-90652d5d7aa3",
+          "leaf_uid": "SRS-UID-90652d5d7aa3",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-90652d5d7aa3"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0045.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "5217981299e34196fec09964db30127c4b3d53422dcecae1f9ca5f783c483c1f",
+            "dependency_context": "dccb32e17c17c37e3ef6cebf4026c715ef5fb2c1db59f581384914dd5a00effa",
+            "evaluation_context": "80a50610fdda9222030a310bcbbab0273c525d0cb0f64ea9131242efd03f529d",
+            "evaluation_subject": "5217981299e34196fec09964db30127c4b3d53422dcecae1f9ca5f783c483c1f"
+          },
+          "dependency_context": {
+            "SRS-UID-08e7228197cf": "000ee2caeb31784ce2ba2cc093e19c83bfdbddc72c1a98c9196cedd166a8c6a5",
+            "SRS-UID-0ba532e83e72": "0219d5a7e23749b51c070fbc1d8835f7537c0230be6cf794b2c33cd43603122c",
+            "SRS-UID-4aa54bece4a9": "566f989370b18e87b9a4f432430d23cb889a5c788a5046541bd06e7852f56d84",
+            "SRS-UID-54ac7aca6d5c": "9525f1d491dde7b89542601c82974a5dd50584a5ce54e0f735c4de3f24899e6e",
+            "SRS-UID-6e55455a0a49": "c52736c317d95af0bd36e4730a2395153dc1b3c66a43e29717ff73ca89084945",
+            "SRS-UID-70eb93a1b2b5": "fab61fcef8dd159c8d536f6112a995892a219e68699110a285b3047667473e17",
+            "SRS-UID-969365985a84": "1169fcc6e900b5e1c06981fcdff1424e6415dd8a7864555e9b9968dd60b9b0d9"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "70159475321c3556",
+            "RE-ATOMIC-001": "a952f75d2589fe71",
+            "RE-COMPLETE-001": "33316349ed2e00ef",
+            "RE-EXCEPT-001": "ad29d570add035a4",
+            "RE-FORM-001": "7d6f8fc78fe341e0",
+            "RE-PARAMREF-001": "529f92296f5aa4fc",
+            "RE-RESP-001": "9fb666bf7e11ecb2",
+            "RE-SUBJECT-001": "007b052bbf3e3a3f",
+            "RE-TYPE-001": "7317d4c78a5acc7d",
+            "RE-VERIFY-001": "15aabdf6bb85b5ee"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-54c4d342d145",
+          "leaf_uid": "SRS-UID-54c4d342d145",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-54c4d342d145"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0057.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "6b2a9218ef023f8eddadb7c295baa4b3b04032de6dcf743ffa5a2580b53a7254",
+            "dependency_context": "5d127d93790a29cd06e4d14c5912ad9b188de82882ffb42792f8d2e737e0cc32",
+            "evaluation_context": "74412065f2af9f3bcf3d34e764c1643a7e1a775087e1e83969af91ab09e42ae2",
+            "evaluation_subject": "6b2a9218ef023f8eddadb7c295baa4b3b04032de6dcf743ffa5a2580b53a7254"
+          },
+          "dependency_context": {
+            "SRS-UID-8eb355e1a452": "f7e7db4765d2aa72a4c06fde0e420e8e3e148306f6ec54d6dbb63ac8c92765b4",
+            "SRS-UID-b766bcfe942a": "06aed993ce04bf56a07ed5112c8d50bc1bf8747c706d80b168791cacfb1abbe8"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "ac08252093470ac1",
+            "RE-ATOMIC-001": "f0fb657a65241f55",
+            "RE-COMPLETE-001": "63acb0f0ab28487d",
+            "RE-EXCEPT-001": "59c54b3df0026a0f",
+            "RE-FORM-001": "7159d221b7555809",
+            "RE-PARAMREF-001": "6d37784ebaa3d4e4",
+            "RE-RESP-001": "179e23df97ce4cad",
+            "RE-SUBJECT-001": "50ce81322478e419",
+            "RE-TYPE-001": "9d8d019b242f5604",
+            "RE-VERIFY-001": "c07711054add8d11"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-8eb355e1a452",
+          "leaf_uid": "SRS-UID-8eb355e1a452",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-8eb355e1a452"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0016.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "f7e7db4765d2aa72a4c06fde0e420e8e3e148306f6ec54d6dbb63ac8c92765b4",
+            "dependency_context": "bb89ff5ff0d9a96819e1c25d7010ee7d5150e7d01b4151f182732f83d6c6bf11",
+            "evaluation_context": "5cddd49d082209ad3f0dd8988cc5e26282fa94f660863ab5e6bbfb2953d7c1d8",
+            "evaluation_subject": "f7e7db4765d2aa72a4c06fde0e420e8e3e148306f6ec54d6dbb63ac8c92765b4"
+          },
+          "dependency_context": {
+            "SRS-UID-54c4d342d145": "6b2a9218ef023f8eddadb7c295baa4b3b04032de6dcf743ffa5a2580b53a7254",
+            "SRS-UID-b766bcfe942a": "06aed993ce04bf56a07ed5112c8d50bc1bf8747c706d80b168791cacfb1abbe8",
+            "SRS-UID-c2e6e4d1c0a3": "8c3b75b58c27f64fa6ee09eea06ad27bf6e55c7fdd5e7c610a9288e5cd2b0dfa"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "0e8dbd9bf8a6611e",
+            "RE-ATOMIC-001": "4c776dffeb94cf2e",
+            "RE-COMPLETE-001": "93d4a14aca7cb23c",
+            "RE-EXCEPT-001": "64307cbddb84bc7c",
+            "RE-FORM-001": "b3bece2db46095ee",
+            "RE-PARAMREF-001": "eea976c1244255af",
+            "RE-RESP-001": "5cb42f4ebade465c",
+            "RE-SUBJECT-001": "023e21b93b60a5a5",
+            "RE-TYPE-001": "a68947d9a92b34df",
+            "RE-VERIFY-001": "172b889c5767b1bc"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-b766bcfe942a",
+          "leaf_uid": "SRS-UID-b766bcfe942a",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-b766bcfe942a"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0052.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "06aed993ce04bf56a07ed5112c8d50bc1bf8747c706d80b168791cacfb1abbe8",
+            "dependency_context": "5bae22c131c2a6c96fc4b3413d35bc7aaf265680095717a17dc00fbe8810b95e",
+            "evaluation_context": "e6103de585a2efb7211b99db9ffdbfc2cb3cd9e82026e1980321e9156c78d7a0",
+            "evaluation_subject": "06aed993ce04bf56a07ed5112c8d50bc1bf8747c706d80b168791cacfb1abbe8"
+          },
+          "dependency_context": {
+            "SRS-UID-54c4d342d145": "6b2a9218ef023f8eddadb7c295baa4b3b04032de6dcf743ffa5a2580b53a7254",
+            "SRS-UID-8eb355e1a452": "f7e7db4765d2aa72a4c06fde0e420e8e3e148306f6ec54d6dbb63ac8c92765b4"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "c7d52a0f233ed8ff",
+            "RE-ATOMIC-001": "26e634552817935d",
+            "RE-COMPLETE-001": "02456b4ded398a87",
+            "RE-EXCEPT-001": "00de05f97740d4d9",
+            "RE-FORM-001": "271786450f6d15c8",
+            "RE-PARAMREF-001": "0f33d0ba51ffecec",
+            "RE-RESP-001": "5b5f259d25cfef1d",
+            "RE-SUBJECT-001": "6ef3d5f5a3164fa2",
+            "RE-TYPE-001": "01d00c5d411d6e5e",
+            "RE-VERIFY-001": "f3d42082dceddddb"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-354ded1a7d89",
+          "leaf_uid": "SRS-UID-354ded1a7d89",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-354ded1a7d89"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0087.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "93627c047f3c83ac5bc74a37180aa316c5bdc8fecedc88713757f371c146c41f",
+            "dependency_context": "928a57190e0bed44edebdb4128c92d73671bd48fb392b6adacfaaad3ae442e91",
+            "evaluation_context": "2c237d97760af9a4b44bb5a42031bcfe64c37729b0924c1cf71022438c2eea3d",
+            "evaluation_subject": "93627c047f3c83ac5bc74a37180aa316c5bdc8fecedc88713757f371c146c41f"
+          },
+          "dependency_context": {
+            "SRS-UID-5fc43d086f0b": "302a7be755cd31d98580f75d03043a3338f3617c870cb02beb260b9ac682d202"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "9089e16f8a5308ac",
+            "RE-ATOMIC-001": "7bd7d1a6c5bf0ce2",
+            "RE-COMPLETE-001": "cb99255370727221",
+            "RE-EXCEPT-001": "4fe949581a3d8694",
+            "RE-FORM-001": "81f80e21c23d2b82",
+            "RE-PARAMREF-001": "5193a8cb209e74f6",
+            "RE-RESP-001": "4c0ffed23cb9f063",
+            "RE-SUBJECT-001": "3073dc85efc84389",
+            "RE-TYPE-001": "450b74a6dfeb62aa",
+            "RE-VERIFY-001": "e294e68bc2723874"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-5fc43d086f0b",
+          "leaf_uid": "SRS-UID-5fc43d086f0b",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-5fc43d086f0b"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0079.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "302a7be755cd31d98580f75d03043a3338f3617c870cb02beb260b9ac682d202",
+            "dependency_context": "3e3cc117cc12abcb344911b58a5827cc29e7cd339055160856017ba4b0129ec0",
+            "evaluation_context": "e3183443f88af9bc2f17b41172eb10b973824286d201507fd0f5ae9a4c506935",
+            "evaluation_subject": "302a7be755cd31d98580f75d03043a3338f3617c870cb02beb260b9ac682d202"
+          },
+          "dependency_context": {
+            "SRS-UID-354ded1a7d89": "93627c047f3c83ac5bc74a37180aa316c5bdc8fecedc88713757f371c146c41f"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "e0c625e7aa87b1c4",
+            "RE-ATOMIC-001": "4da934330fdb8e2e",
+            "RE-COMPLETE-001": "57b0685f1cc15f37",
+            "RE-EXCEPT-001": "67438937fb6a1364",
+            "RE-FORM-001": "41d5129d49932551",
+            "RE-PARAMREF-001": "809b0a9cff8a30e5",
+            "RE-RESP-001": "5408fac48a96a20d",
+            "RE-SUBJECT-001": "eb8fe0a8fb2e4158",
+            "RE-TYPE-001": "8b81f9338aa60485",
+            "RE-VERIFY-001": "4833a57345b7a33c"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-08155596f55d",
+          "leaf_uid": "SRS-UID-08155596f55d",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-08155596f55d"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0051.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "49683195db8a4cc9d8817bc73f39153003f07eb8750bae29f32b9aa81e16164c",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "5db42659aac77cf557ef259d7c05842b6ee03eb7f29a80e983dd6f774fd4d76e",
+            "evaluation_subject": "49683195db8a4cc9d8817bc73f39153003f07eb8750bae29f32b9aa81e16164c"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "e28c85b465e7a061",
+            "RE-ATOMIC-001": "400b3a3fc7be6979",
+            "RE-COMPLETE-001": "f307de2a20f716a3",
+            "RE-EXCEPT-001": "4717d2845de00dc2",
+            "RE-FORM-001": "37984f29d48499ba",
+            "RE-PARAMREF-001": "9276e95ee280abfc",
+            "RE-RESP-001": "82fc4008e8c16f4e",
+            "RE-SUBJECT-001": "69c593762198648f",
+            "RE-TYPE-001": "0cd4ec3118bec502",
+            "RE-VERIFY-001": "0ca29ccdd439a6d1"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-1b035ba15cdc",
+          "leaf_uid": "SRS-UID-1b035ba15cdc",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-1b035ba15cdc"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0072.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "6735a06d436ddc1b53098e2ccb2bbaa0c4cfa72533e26b278e5ad235bca60ce1",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "f5db5e8c6e4baf84a19e5ba8741608e5c98645c099f0c8285b8a96d1f34cc1ea",
+            "evaluation_subject": "6735a06d436ddc1b53098e2ccb2bbaa0c4cfa72533e26b278e5ad235bca60ce1"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "35118b8047ca56f3",
+            "RE-ATOMIC-001": "3cc6350e4c7fdbbc",
+            "RE-COMPLETE-001": "7e04fd04ce3ec488",
+            "RE-EXCEPT-001": "c069afb1eafbd381",
+            "RE-FORM-001": "d7d28263b72dc9c4",
+            "RE-PARAMREF-001": "8d8903abd535781a",
+            "RE-RESP-001": "f4bf4198fbcae750",
+            "RE-SUBJECT-001": "81e98e8b4d4ba93f",
+            "RE-TYPE-001": "17928bcf95f4db53",
+            "RE-VERIFY-001": "85daf65677870f1f"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-3cbbc7ed9209",
+          "leaf_uid": "SRS-UID-3cbbc7ed9209",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-3cbbc7ed9209"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0088.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "9fae64df8462bafa53b7705e808f6aa8f99a5915b4a29f9ad8a2d286567bf63f",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "033fec6fbd88366c89e985fcd3b46a57396d1e68db31c84f326fd052ef3e8420",
+            "evaluation_subject": "9fae64df8462bafa53b7705e808f6aa8f99a5915b4a29f9ad8a2d286567bf63f"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "fd293415e221c149",
+            "RE-ATOMIC-001": "e96115daedee5a77",
+            "RE-COMPLETE-001": "45d5fdc4e3779040",
+            "RE-EXCEPT-001": "f79a7e05816cc691",
+            "RE-FORM-001": "832d3784fb44933c",
+            "RE-PARAMREF-001": "f92af9319e38b68c",
+            "RE-RESP-001": "29169ba3a1b3aaf9",
+            "RE-SUBJECT-001": "6b403f010e2a9cac",
+            "RE-TYPE-001": "d24b1cf1b7c5aa33",
+            "RE-VERIFY-001": "8c844ab84d02eab4"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-50180248c1f8",
+          "leaf_uid": "SRS-UID-50180248c1f8",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-50180248c1f8"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0019.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "95a153567ea1d5dfdfcfb861245161f65e21a373f00eed1a86118e3cda9f5f33",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "193018d411dce6c4ba2c8a0e796c7b5b9a262260d873c865ecc5ed11424f08ae",
+            "evaluation_subject": "95a153567ea1d5dfdfcfb861245161f65e21a373f00eed1a86118e3cda9f5f33"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "bcb59926bf3a2325",
+            "RE-ATOMIC-001": "7af66a58deb44692",
+            "RE-COMPLETE-001": "2ec8ec42d0ce35e0",
+            "RE-EXCEPT-001": "1bb8b38f2b136f22",
+            "RE-FORM-001": "bd8162b56ef41104",
+            "RE-PARAMREF-001": "dee75580542b3d50",
+            "RE-RESP-001": "bb3aebb38cdbc38a",
+            "RE-SUBJECT-001": "9995e97a22d75a33",
+            "RE-TYPE-001": "d74949c7222e94d9",
+            "RE-VERIFY-001": "e2f3ca706f23056e"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-5d80f0f84b43",
+          "leaf_uid": "SRS-UID-5d80f0f84b43",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-5d80f0f84b43"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0073.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "eee012e4405c553abfc0ebc4c17cc481d3f7975226a10a255a3f5c2fe7cec180",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "1bec507c1644e7499d1689a920738dfbd43831434c6f85be3d35ca80fdb97d8d",
+            "evaluation_subject": "eee012e4405c553abfc0ebc4c17cc481d3f7975226a10a255a3f5c2fe7cec180"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "3e7f2ef478825a73",
+            "RE-ATOMIC-001": "a29ca3b117a8f2f3",
+            "RE-COMPLETE-001": "e89fa887891ed047",
+            "RE-EXCEPT-001": "d44689763f6af838",
+            "RE-FORM-001": "fedf1a46884e1168",
+            "RE-PARAMREF-001": "a565c2d2ee0883aa",
+            "RE-RESP-001": "7aecd213928f8f77",
+            "RE-SUBJECT-001": "767b29d6f3f0b535",
+            "RE-TYPE-001": "5194e47416a1048c",
+            "RE-VERIFY-001": "4836b9132380194e"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-659d73813109",
+          "leaf_uid": "SRS-UID-659d73813109",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-659d73813109"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0074.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "590677650a887bf2b5c1c1a1110facfb566163978ff0572e83abaa7855512217",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "79aac9bca3de7156127bbff2575d176ebff400e035b7739ed29a330b35bc7241",
+            "evaluation_subject": "590677650a887bf2b5c1c1a1110facfb566163978ff0572e83abaa7855512217"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "4b5e14f69e9ecbf3",
+            "RE-ATOMIC-001": "f9608de339708c66",
+            "RE-COMPLETE-001": "74f9f6025a4361f1",
+            "RE-EXCEPT-001": "63d2059e3ec557d8",
+            "RE-FORM-001": "4d725a9a9d8d88df",
+            "RE-PARAMREF-001": "1a54f9f773d8b5bd",
+            "RE-RESP-001": "bf1a9a7db35061ae",
+            "RE-SUBJECT-001": "c963144dfa0a8b0c",
+            "RE-TYPE-001": "b2d3abc65aa8a1cf",
+            "RE-VERIFY-001": "767276de9c338fbb"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-8a374d9ae601",
+          "leaf_uid": "SRS-UID-8a374d9ae601",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-8a374d9ae601"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0018.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "da1e5c232771d1b4cade67f7a3b882e49ae3bb3931f9b30efba0bf546e14b2f2",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "a6d890abfb37e6589072e0c80e6dfa9222e8067991afb6a651f6fa8f81029406",
+            "evaluation_subject": "da1e5c232771d1b4cade67f7a3b882e49ae3bb3931f9b30efba0bf546e14b2f2"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "b28a8ab8885d30b1",
+            "RE-ATOMIC-001": "dbe8994dd71d81d8",
+            "RE-COMPLETE-001": "1042d2c98a4b6068",
+            "RE-EXCEPT-001": "3bc9c2fff23e018b",
+            "RE-FORM-001": "79c10f5a6f7ee7e6",
+            "RE-PARAMREF-001": "1912aa7bcf3260a3",
+            "RE-RESP-001": "3d10c32676d9abc5",
+            "RE-SUBJECT-001": "dbb36a9262082b2d",
+            "RE-TYPE-001": "7110aab189a87aa2",
+            "RE-VERIFY-001": "09f84e89c18e0d7e"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-99cd8567728c",
+          "leaf_uid": "SRS-UID-99cd8567728c",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-99cd8567728c"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0041.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "11a48443b46982694630e14c9cb3edcc4119b599321b891f9429b11ffe51947c",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "2c52d5cd4c39d6aa3da8a2e116b69922654e5fe151ffebe7fe4b5b522718809e",
+            "evaluation_subject": "11a48443b46982694630e14c9cb3edcc4119b599321b891f9429b11ffe51947c"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "6fcc9b1cbc2fffb7",
+            "RE-ATOMIC-001": "f7feb4a39457bffd",
+            "RE-COMPLETE-001": "8369d146bab6cf32",
+            "RE-EXCEPT-001": "5e85975ac3613480",
+            "RE-FORM-001": "44f139a8ac15d46c",
+            "RE-PARAMREF-001": "b541c8881a62e203",
+            "RE-RESP-001": "70d24a858f90e126",
+            "RE-SUBJECT-001": "590ac9b3fd5adfa5",
+            "RE-TYPE-001": "96dccecc9d95c8ee",
+            "RE-VERIFY-001": "5febe634839642fe"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-aa9f58d2c76e",
+          "leaf_uid": "SRS-UID-aa9f58d2c76e",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-aa9f58d2c76e"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0071.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "725816407f5e98a56b4ff9accbb6ca6fb6fb0998b4fa9944c218f88c19180b26",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "70242c5a00bdcde60628f94a1d2a3f6721fa802c8838d8ff0431f7834625d378",
+            "evaluation_subject": "725816407f5e98a56b4ff9accbb6ca6fb6fb0998b4fa9944c218f88c19180b26"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "6e67ec84916eb27c",
+            "RE-ATOMIC-001": "993a3b501758b7f0",
+            "RE-COMPLETE-001": "2f174559b5b972ff",
+            "RE-EXCEPT-001": "eacd1bf13dfb7592",
+            "RE-FORM-001": "a19d60ca04a9ae19",
+            "RE-PARAMREF-001": "df04cf36823379fe",
+            "RE-RESP-001": "8d469ba60715a190",
+            "RE-SUBJECT-001": "8ff153d9b539693e",
+            "RE-TYPE-001": "893b0a6cc26033e0",
+            "RE-VERIFY-001": "8d8bd409d94eb04a"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-aadbffd4c099",
+          "leaf_uid": "SRS-UID-aadbffd4c099",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-aadbffd4c099"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0006.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "00fbeb9c7adebf0abc7033eb4466921bc49aeaec5d7cb0963cb6bfbbd29fbe79",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "a414d1c69acb7d82b138ede04b050f4491811fb85800342212befc55dc178a82",
+            "evaluation_subject": "00fbeb9c7adebf0abc7033eb4466921bc49aeaec5d7cb0963cb6bfbbd29fbe79"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "549154a96943900d",
+            "RE-ATOMIC-001": "4a192fc5cd8f3d1b",
+            "RE-COMPLETE-001": "9db5503fe495c4e3",
+            "RE-EXCEPT-001": "8d4ce04afa9fe96d",
+            "RE-FORM-001": "060f45557f380f54",
+            "RE-PARAMREF-001": "b047e24ab4d510a1",
+            "RE-RESP-001": "da1fbcd3e2edb477",
+            "RE-SUBJECT-001": "0eeb3494143c5043",
+            "RE-TYPE-001": "879b4f8b998d9ec9",
+            "RE-VERIFY-001": "447b041056c550c5"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-c0161cfccccd",
+          "leaf_uid": "SRS-UID-c0161cfccccd",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-c0161cfccccd"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0056.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "67a738c98a9c6c5ff054da7a8110e33885a021dedac1390c4d35b73d309ec2cd",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "4614b633aaa8060310cff09d7e370f03b4ec83116509cbeeb1b087b0e9f8090f",
+            "evaluation_subject": "67a738c98a9c6c5ff054da7a8110e33885a021dedac1390c4d35b73d309ec2cd"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "ac071edec5a50dbe",
+            "RE-ATOMIC-001": "5a0e5dc185cfa88a",
+            "RE-COMPLETE-001": "ca9f8f72b773feea",
+            "RE-EXCEPT-001": "94d6a49088395089",
+            "RE-FORM-001": "bf5495adf5e1fedd",
+            "RE-PARAMREF-001": "56eff751ecf9b875",
+            "RE-RESP-001": "544bc9342bf9415e",
+            "RE-SUBJECT-001": "8664fabc6bc8417b",
+            "RE-TYPE-001": "611647d080019d90",
+            "RE-VERIFY-001": "0b50fdef7d204b79"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-c724932fcc30",
+          "leaf_uid": "SRS-UID-c724932fcc30",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-c724932fcc30"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0012.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "9bdcdcf9022de73a9c08f30b0b7b5f94937cc98b6ab7da36bd2f9361c0c303c5",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "7e3d820469eb619bbea4e6e3692234c659fc834a1b33f885dd711b234ccf0679",
+            "evaluation_subject": "9bdcdcf9022de73a9c08f30b0b7b5f94937cc98b6ab7da36bd2f9361c0c303c5"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "4097dc97ce375253",
+            "RE-ATOMIC-001": "e4064cdd4bfb83ff",
+            "RE-COMPLETE-001": "01fee7aa2bf07112",
+            "RE-EXCEPT-001": "ae36b223b72de59f",
+            "RE-FORM-001": "9bc31c0cea0bd160",
+            "RE-PARAMREF-001": "4f9fea9fa1e1394b",
+            "RE-RESP-001": "e509bbc7b7e94b2e",
+            "RE-SUBJECT-001": "a30d23c29cb63a86",
+            "RE-TYPE-001": "f1accd4049b87fbf",
+            "RE-VERIFY-001": "7ac377699b8bf7ef"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-c9d33433a36d",
+          "leaf_uid": "SRS-UID-c9d33433a36d",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-c9d33433a36d"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0048.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "ab6ab90c7a45eb7afe237383cb20e525499a14d2e6f40bd7c0dbc78cce80f1a2",
+            "dependency_context": "4fa009c3c1148202779bd8aaed3778225ea8af22b98a9e8480698480b66c4d37",
+            "evaluation_context": "fe40ce36dc4a3979b8c0f99f794b95a5d83d53e1db8c25ad49b3af576324dfc9",
+            "evaluation_subject": "ab6ab90c7a45eb7afe237383cb20e525499a14d2e6f40bd7c0dbc78cce80f1a2"
+          },
+          "dependency_context": {
+            "SRS-UID-2a1cbfe4b279": "452e891b439771195ef43b1ef59437ca77ed7bc14fdb0d0ccc431b37e30904f1",
+            "SRS-UID-4e3a1171bae0": "36938863b655ae2ab5852cfe0185fd1be70c448613773e74d78c97f9a279a658",
+            "SRS-UID-4ed9027c76ae": "2aaa86090f3036f3c2264368fb0fc2f036bf424a0930abe0b1036cc897729c71",
+            "SRS-UID-bcb20d226ca4": "b52887e4f3196848c4083182a9a51271a70197f3213081d5ff3255fb845eb240",
+            "SRS-UID-e3771e8b9bb2": "ca424ebea3a8a77cbb0908020ab660287df9d612cb30b39333fa4b1df26c5e7e"
+          },
+          "evaluation_ids": {
+            "RE-AMBIG-001": "e4df459754e4995e",
+            "RE-ATOMIC-001": "6db585448a278892",
+            "RE-COMPLETE-001": "dc2a832e0bea9712",
+            "RE-EXCEPT-001": "6286a2d6261377e0",
+            "RE-FORM-001": "ae2bd76a1d12df27",
+            "RE-PARAMREF-001": "9abe89b0b5c9a487",
+            "RE-RESP-001": "ce849b4fb7a6f0d4",
+            "RE-SUBJECT-001": "b294ad32adbe7740",
+            "RE-TYPE-001": "c471dcaad66a4038",
+            "RE-VERIFY-001": "cda3f0a0d1ff2eb6"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-dfbfc1b21529",
+          "leaf_uid": "SRS-UID-dfbfc1b21529",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-dfbfc1b21529"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0013.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "6c939bad902a40c5932e1d118c127f9b6c57054ca6a5907c1c5d70110b747166",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "ea5c82ed72df86bafcf853ecabe970e2485e8112345bd24034a6c83565b0034b",
+            "evaluation_subject": "6c939bad902a40c5932e1d118c127f9b6c57054ca6a5907c1c5d70110b747166"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "93bd4f0e1abb603e",
+            "RE-ATOMIC-001": "71646cbb36d8d3ca",
+            "RE-COMPLETE-001": "5b04e7a713ac02ba",
+            "RE-EXCEPT-001": "e334c53e58b173e4",
+            "RE-FORM-001": "b0a2899c40d69e57",
+            "RE-PARAMREF-001": "3b3bfbb42bfc8a2d",
+            "RE-RESP-001": "a51631c3fa32e5af",
+            "RE-SUBJECT-001": "350d031a36a8aecd",
+            "RE-TYPE-001": "50f2c7764090761f",
+            "RE-VERIFY-001": "55d73f4800b8c65a"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-faa6b5c06ab7",
+          "leaf_uid": "SRS-UID-faa6b5c06ab7",
+          "role": "target",
+          "required_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "fresh_rule_ids": [
+            "RE-AMBIG-001",
+            "RE-ATOMIC-001",
+            "RE-COMPLETE-001",
+            "RE-EXCEPT-001",
+            "RE-FORM-001",
+            "RE-PARAMREF-001",
+            "RE-RESP-001",
+            "RE-SUBJECT-001",
+            "RE-TYPE-001",
+            "RE-VERIFY-001"
+          ],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-faa6b5c06ab7"
+          ],
+          "reason": "force_full_review",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0020.md",
+          "evaluation_scope": "self",
+          "fingerprints": {
+            "leaf_content": "dd55be1ab3d5829158673412cb0ac31975e53fcee85ea6c6d3b2834a610e4ddb",
+            "dependency_context": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "evaluation_context": "a8b19d261fe03161ef2da2d0f167f26a8ef195db337cf0fda911000e01689488",
+            "evaluation_subject": "dd55be1ab3d5829158673412cb0ac31975e53fcee85ea6c6d3b2834a610e4ddb"
+          },
+          "dependency_context": {},
+          "evaluation_ids": {
+            "RE-AMBIG-001": "a552ba52b170c195",
+            "RE-ATOMIC-001": "4e2827d0e9744a2a",
+            "RE-COMPLETE-001": "03fbc6ce75c7b6c4",
+            "RE-EXCEPT-001": "904631a4cda4aa17",
+            "RE-FORM-001": "acebd2a107b879df",
+            "RE-PARAMREF-001": "8977968c69085fde",
+            "RE-RESP-001": "2df63f515fd6700f",
+            "RE-SUBJECT-001": "4e2a9b9d27e6179c",
+            "RE-TYPE-001": "17293b3a6ab4df79",
+            "RE-VERIFY-001": "e4322a19e4f711a6"
+          }
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-08e7228197cf",
+          "leaf_uid": "SRS-UID-08e7228197cf",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0047.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-08e7228197cf"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-0ba532e83e72",
+          "leaf_uid": "SRS-UID-0ba532e83e72",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0049.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-0ba532e83e72"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-2a1cbfe4b279",
+          "leaf_uid": "SRS-UID-2a1cbfe4b279",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0081.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-2a1cbfe4b279"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-4e3a1171bae0",
+          "leaf_uid": "SRS-UID-4e3a1171bae0",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0113.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-4e3a1171bae0"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-4ed9027c76ae",
+          "leaf_uid": "SRS-UID-4ed9027c76ae",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0114.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-4ed9027c76ae"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-5455aee01afe",
+          "leaf_uid": "SRS-UID-5455aee01afe",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0002.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-5455aee01afe"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-6e55455a0a49",
+          "leaf_uid": "SRS-UID-6e55455a0a49",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0044.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-6e55455a0a49"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-969365985a84",
+          "leaf_uid": "SRS-UID-969365985a84",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0076.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-969365985a84"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-bcb20d226ca4",
+          "leaf_uid": "SRS-UID-bcb20d226ca4",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0112.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-bcb20d226ca4"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-c2e6e4d1c0a3",
+          "leaf_uid": "SRS-UID-c2e6e4d1c0a3",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0061.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-c2e6e4d1c0a3"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-c370f3e3e3fe",
+          "leaf_uid": "SRS-UID-c370f3e3e3fe",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0008.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-c370f3e3e3fe"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        },
+        {
+          "subject_type": "leaf",
+          "subject_key": "SRS-UID-e3771e8b9bb2",
+          "leaf_uid": "SRS-UID-e3771e8b9bb2",
+          "leaf_path": "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/ServiceDiscovery/SRS-SomeIP-ServiceDiscovery-0029.md",
+          "role": "context",
+          "required_rule_ids": [],
+          "fresh_rule_ids": [],
+          "replay_rule_ids": [],
+          "evaluation_group": null,
+          "member_uids": [
+            "SRS-UID-e3771e8b9bb2"
+          ],
+          "evaluation_scope": null,
+          "reason": "read_only_context"
+        }
+      ],
+      "plan_fingerprint": "1e39a26c06a8e3c6897f5b4d2c8aae2a0b5697e9c18973f01c550f03e9b14cf2",
+      "unavailable_evaluations": []
+    },
+    "integrity_version": 1,
+    "readonly_fingerprints": {
+      "/home/worker/workspace/someip-standard/.srs-run/staging/RUN-6ea9e80601dc/review-re-p2.review.part-2.instructions.4c61697bd693731d.md": "4c61697bd693731d8cb07e3e4aaf94e54a03cfc376b8d50dcd8abb7f706c4dd9"
+    },
+    "instruction_packet_path": "/home/worker/workspace/someip-standard/.srs-run/staging/RUN-6ea9e80601dc/review-re-p2.review.part-2.instructions.4c61697bd693731d.md"
+  },
+  "input_fingerprint": "d9e315a1fbdb97c7f865d7e957736ac509351fee73a486cfb43fb79965fe0cfe",
+  "required_checks": [
+    "RE-AMBIG-001",
+    "RE-ATOMIC-001",
+    "RE-COMPLETE-001",
+    "RE-EXCEPT-001",
+    "RE-FORM-001",
+    "RE-PARAMREF-001",
+    "RE-RESP-001",
+    "RE-SUBJECT-001",
+    "RE-TYPE-001",
+    "RE-VERIFY-001"
+  ],
+  "output_path": "/home/worker/workspace/someip-standard/.srs-run/staging/RUN-6ea9e80601dc/review-re-p2.review.part-2.json",
+  "attempt": 1,
+  "output_contract": {
+    "schema_path": "contracts/review-submission.schema.json",
+    "echo_fields": [
+      "task_id",
+      "input_fingerprint"
+    ]
+  },
+  "clarity_output_path": "/home/worker/workspace/someip-standard/.srs-run/staging/RUN-6ea9e80601dc/review-re-p2.clarity-feedback.part-2.json"
+}
