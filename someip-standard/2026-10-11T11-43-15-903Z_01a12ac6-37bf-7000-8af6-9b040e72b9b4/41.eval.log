@@ -1,0 +1,1562 @@
+==================== SRS-UID-ba8ad3054b3c 1 ====================
+---
+uid: SRS-UID-ba8ad3054b3c
+id: SRS-SomeIP-RoutingManagement-0001
+cb_id: 38203829
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Registration Table Initial State
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+- SRS-SomeIP-RoutingManagement-0034
+- SRS-UID-b23269fdfb7d
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 power-on 시 서비스 등록 테이블을 등록 없음 상태로 리셋하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-2352d34613f6 2 ====================
+---
+uid: SRS-UID-2352d34613f6
+id: SRS-SomeIP-RoutingManagement-0002
+cb_id: 38285337
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: SD Initiation Prohibition Before Internal State Ready
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0077
+- SRS-UID-55f4f1b550fd
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 자신의 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신 채널 확립 및 EventGroup 구독 목록 초기화가 모두 완료되기 전에는 서비스 등록 또는 Service Discovery 관련 동작(OfferService, FindService, SubscribeEventgroup 및 StopSubscribeEventgroup)을 수행하지 않아야 한다.
+
+## Notes
+
+
+==================== SRS-UID-936d288733a4 3 ====================
+---
+uid: SRS-UID-936d288733a4
+id: SRS-SomeIP-RoutingManagement-0003
+cb_id: 38285338
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Registration After Internal State Ready
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_RM_ServiceRegister_Timeout
+  type: uint32
+  range: 500~10000
+  unit: ms
+  default: '3000'
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+- SRS-SomeIP-RoutingManagement-0078
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 준비 완료 후 {P_RM_ServiceRegister_Timeout} 이내에 service 등록을 완료하여야 하며, 해당 시간 내 완료되지 않으면 service를 등록 완료 상태로 취급하여서는 안 된다.
+## Notes
+
+
+==================== SRS-UID-b23269fdfb7d 4 ====================
+---
+uid: SRS-UID-b23269fdfb7d
+id: SRS-SomeIP-RoutingManagement-0004
+cb_id: 38285339
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Initialization Timeout Failure Detection
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_RM_Init_Timeout
+  type: uint32
+  range: 1000~30000
+  unit: ms
+  default: '8000'
+mapped_parameter: []
+related_items: [SRS-UID-55f4f1b550fd]
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 초기화 시작 시점부터 {P_RM_Init_Timeout} 이내에 준비 상태(서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신 채널 확립 및 EventGroup 구독 목록 초기화 완료)에 도달하지 못할 경우, 초기화 실패로 처리하여야 한다.
+
+## Notes
+
+초기화 실패 시 application에 미들웨어 초기화 오류를 통지하는 동작은 SRS-SomeIP-RoutingManagement-0083에서, 미들웨어 초기화 완료 이벤트를 통지하지 않는 동작은 SRS-SomeIP-RoutingManagement-0082에서 규정한다.
+
+
+==================== SRS-UID-aadbffd4c099 6 ====================
+---
+uid: SRS-UID-aadbffd4c099
+id: SRS-SomeIP-RoutingManagement-0006
+cb_id: 38285340
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Re-registration Handling After Abnormal Termination
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 비정상 종료 후 재시작 완료 시, 재연결하는 local application으로부터 재수신되는 service 등록 요청을 신규 service 등록 요청으로 수용하여 service 등록 절차를 개시하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 재연결 완료 후 재등록 요청이 수신되지 않은 service의 등록 상태를 등록 없음 상태로 유지하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-c724932fcc30 12 ====================
+---
+uid: SRS-UID-c724932fcc30
+id: SRS-SomeIP-RoutingManagement-0012
+cb_id: 38223746
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Communication Recovery Trigger on Link-Up Network Interface Restart
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 PHY link-up 상태가 유지된 상태에서 Network Interface가 재시작되어 기존 SOME/IP 통신 자원이 무효화된 경우, 자신의 초기화가 완료된 상태(준비 완료 이후)일 때에 한하여 SOME/IP 통신 복구를 개시하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 초기화 진행 중 Network Interface 재시작을 수신하면 초기화 완료 전에는 SOME/IP 통신 복구를 개시하지 않고 초기화 완료 후에 개시하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-dfbfc1b21529 13 ====================
+---
+uid: SRS-UID-dfbfc1b21529
+id: SRS-SomeIP-RoutingManagement-0013
+cb_id: 38285345
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: SOME/IP Communication Resource Release on Network Interface Restart
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_ChannelRelease_Timeout
+  type: uint32
+  range: 100~5000
+  unit: ms
+  default: '1000'
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 기능은 PHY link-up 상태가 유지된 상태에서 Network Interface 재시작을 감지하면 감지 시점부터 {P_ChannelRelease_Timeout} 이내에 기존 SOME/IP 통신 자원을 해제하여야 한다.
+
+SOME/IP Routing Management 기능은 Network Interface 재시작 감지 시점부터 {P_ChannelRelease_Timeout}이 경과하였는데도 해제되지 않은 기존 SOME/IP 통신 자원이 있으면 해당 잔여 자원을 통신에 사용할 수 없는 상태로 처리하고 해제하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-8eb355e1a452 16 ====================
+---
+uid: SRS-UID-8eb355e1a452
+id: SRS-SomeIP-RoutingManagement-0016
+cb_id: 38210992
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Unavailability Notification on Provider Loss
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_SvcUnavail_NotifyTimeout
+  type: uint32
+  range: 50~2000
+  unit: ms
+  default: '500'
+mapped_parameter: []
+related_items: []
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 service provider의 비정상 종료(프로세스 또는 실행 환경 종료 포함) 또는 로컬 Ethernet 단절을 포함한 네트워크 연결 단절이 감지되면, 감지 시점부터 측정하여 {P_SvcUnavail_NotifyTimeout}ms 이내에 service consumer에게 Service Unavailable 상태 통지 메시지 전송을 완료하여야 한다. SOME/IP Routing Management 소프트웨어는 위 통지 시도가 {P_SvcUnavail_NotifyTimeout}ms 이내에 완료되지 못하면 통지 실패로 기록하고 application에 통지 실패를 보고하여야 한다.
+
+## Notes
+
+해당 service의 내부 상태 정리는 SRS-SomeIP-RoutingManagement-0057에서 규정한다.
+
+
+==================== SRS-UID-168afc4c4227 17 ====================
+---
+uid: SRS-UID-168afc4c4227
+id: SRS-SomeIP-RoutingManagement-0017
+cb_id: 40610528
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Suspension on Ethernet Interface Fault Detection
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_EthFault_ServiceSuspend_Timeout
+  type: uint32
+  range: 10~1000
+  unit: ms
+  default: '100'
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0058
+- SRS-SomeIP-RoutingManagement-0062
+- SRS-SomeIP-RoutingManagement-0092
+- SRS-SomeIP-RoutingManagement-0093
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 Ethernet Fault Management 모듈로부터 Ethernet interface fault 발생 상태 변화 이벤트를 수신하면 수신 시점에 해당 link가 link-up 상태이고 해당 link의 service offer 및 subscription 식별 정보가 유지되어 StopOffer 및 StopSubscribe를 전송할 수 있는지를 정상 중단 조건으로 판단하여야 한다.
+SOME/IP Routing Management 소프트웨어는 정상 중단 조건을 만족하면 이벤트 수신 시점부터 {P_EthFault_ServiceSuspend_Timeout} 이내에 StopOffer 및 StopSubscribe를 전송하여 해당 link에 바인딩된 서비스의 offer 및 subscription을 중단하여야 한다.
+
+여기서 StopOffer는 service offer 중단을 위한 SD 엔트리를, StopSubscribe는 해당 service의 EventGroup 구독 취소를 위한 TTL=0 SD 엔트리를 가리키며, 둘은 서비스 제공 중단과 구독 취소라는 서로 다른 절차다.
+
+SOME/IP Routing Management 소프트웨어는 이벤트 수신 시점부터 {P_EthFault_ServiceSuspend_Timeout} 이내에 StopOffer 및 StopSubscribe 전송을 완료하지 못하면, link loss 또는 TTL expiry 감지 여부에 따라 결정되는 별도의 만료 또는 종료 처리 경로를 적용하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-8a374d9ae601 18 ====================
+---
+uid: SRS-UID-8a374d9ae601
+id: SRS-SomeIP-RoutingManagement-0018
+cb_id: 38285330
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Duplicate Service ID Registration Rejection
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 이미 등록된 service ID에 대한 후속 등록 요청을 거부하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 후속 등록 요청을 거부할 때 기존에 등록된 해당 service ID의 등록 상태를 변경하지 않아야 한다.
+
+## Notes
+
+
+==================== SRS-UID-50180248c1f8 19 ====================
+---
+uid: SRS-UID-50180248c1f8
+id: SRS-SomeIP-RoutingManagement-0019
+cb_id: 40610537
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Registration Wait Timeout Notification
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_RM_ServiceRegisterWait_Timeout
+  type: uint32
+  range: 1000~10000
+  unit: ms
+  default: '5000'
+mapped_parameter: []
+related_items: []
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 자신의 초기화 완료 신호를 최대 {P_RM_ServiceRegisterWait_Timeout} 동안 대기하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 대기 시간 초과 시 application에 service 등록 비가용 상태를 통지하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-faa6b5c06ab7 20 ====================
+---
+uid: SRS-UID-faa6b5c06ab7
+id: SRS-SomeIP-RoutingManagement-0020
+cb_id: 40610563
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Discovery Resumption on Ethernet Interface Fault Clearance
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+
+## Description
+
+SOME/IP Routing Management 소프트웨어는 Ethernet Fault Management 모듈로부터 Ethernet interface fault가 해제되었음을 나타내는 상태 변화 이벤트를 수신하면, 해당 link에 대해 중단되어 있던 service discovery를 재개하여 FindService 전송을 Multicast SD endpoint로 재개시하여야 한다. Service discovery 재개 완료는 해당 link에 대한 FindService 메시지가 Multicast SD endpoint로 최초 전송된 시점으로 판정한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 Multicast SD endpoint를 사용할 수 없으면 Unicast SD endpoint로 FindService 전송을 재개하고 오류를 기록하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-55f4f1b550fd 34 ====================
+---
+uid: SRS-UID-55f4f1b550fd
+id: SRS-SomeIP-RoutingManagement-0034
+cb_id: 40610539
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Middleware Initialization Completion State
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 서비스 등록 테이블 초기화, SD 상태 머신 초기화, 통신 채널 확립 및 EventGroup 구독 목록 초기화가 모두 완료되면 초기화 완료 상태를 설정하여야 하며, 하나라도 완료되지 않으면 초기화 완료 상태를 설정하여서는 안 된다.
+
+## Notes
+
+
+==================== SRS-UID-89aadd77ac69 35 ====================
+---
+uid: SRS-UID-89aadd77ac69
+id: SRS-SomeIP-RoutingManagement-0035
+cb_id: 40610546
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: OfferService Start After Provider Registration
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+- SRS-SomeIP-RoutingManagement-0075
+- SRS-SomeIP-RoutingManagement-0094
+- SRS-SomeIP-RoutingManagement-0095
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 준비 완료 후 provider 등록 이벤트를 수신하면 OfferService를 개시하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 준비 완료 전에 provider 등록 이벤트를 수신하면 OfferService를 개시하지 않아야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-299c2c3e3a58 36 ====================
+---
+uid: SRS-UID-299c2c3e3a58
+id: SRS-SomeIP-RoutingManagement-0036
+cb_id: 40610535
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: FindService Start After Discovery Trigger
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+- SRS-SomeIP-RoutingManagement-0096
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 준비 완료 후 consumer의 service discovery 요청을 수신하면 FindService를 개시하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 준비 완료 전이거나 consumer의 service discovery 요청이 수신되지 않으면 FindService를 개시하지 않아야 한다.
+
+## Notes
+Ethernet link-up 지연 및 탐색 실패 재시도는 SRS-UID-d6ff734e0cea 요구사항에서 규정한다.
+
+
+==================== SRS-UID-99cd8567728c 41 ====================
+---
+uid: SRS-UID-99cd8567728c
+id: SRS-SomeIP-RoutingManagement-0041
+cb_id: 40610550
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Field Semantics Declaration
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: interface_comm
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 각 Field의 서비스 인터페이스 정의에 적용되는 Getter, Setter 및 Notifier semantics의 부분집합을 명시하여야 하며, 명시된 semantics만 제공하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 서비스 인터페이스 정의에 명시되지 않은 Field 동작 요청이 수신되면 해당 동작을 제공하지 않아야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-c9d33433a36d 48 ====================
+---
+uid: SRS-UID-c9d33433a36d
+id: SRS-SomeIP-RoutingManagement-0048
+cb_id: 40610556
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service and Method Transport Policy
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재등록 및 service discovery 재개 시 각 service 또는 Method에 대해 transport policy를 적용할 때, 프로젝트 설정으로 지정된 delivery requirement 값이 guaranteed/reliable delivery(재전송 및 순서 보장 필요)이면 TCP를 선택하여야 한다.
+
+SOME/IP Routing Management 소프트웨어는 delivery requirement 설정값이 프로젝트 설정에 정의되어 있지 않으면 transport policy 평가 실패로 처리하여야 하며, 해당 설정값이 정의될 때까지 transport 선택을 완료한 것으로 처리하지 않아야 한다.
+
+## Notes
+
+
+==================== SRS-UID-08155596f55d 51 ====================
+---
+uid: SRS-UID-08155596f55d
+id: SRS-SomeIP-RoutingManagement-0051
+cb_id: 40610526
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Unavailability on OfferService TTL Expiry
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 진행 중인 OfferService의 TTL 카운터가 0에 도달하고 해당 service에 대한 재전송이 수신되지 않은 상태(TTL 만료)가 되면, 해당 service를 Service Unavailable 상태로 설정하고 해당 service의 모든 활성 subscription을 종료하여야 한다. SOME/IP Routing Management 소프트웨어는 Service Unavailable 전환 시점에 해당 service의 활성 EventGroup 구독자에게는 push 방식의 Event notification으로 Service Unavailable 전환을 통지하여야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-b766bcfe942a 52 ====================
+---
+uid: SRS-UID-b766bcfe942a
+id: SRS-SomeIP-RoutingManagement-0052
+cb_id: 40610552
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Unavailability Handling Failure
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0016
+- SRS-SomeIP-RoutingManagement-0057
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 Service Unavailable 상태 통지 또는 해당 service 내부 상태 전환이 각 요구사항의 시간 제한 내에 완료되지 않으면, application에 처리 실패를 통지하고 해당 service를 Service Unavailable 상태로 유지하여야 한다.
+
+## Notes
+
+Service Unavailable 상태 통지는 SRS-SomeIP-RoutingManagement-0016에서, service 내부 상태 전환은 SRS-SomeIP-RoutingManagement-0057에서 규정한다.
+
+
+==================== SRS-UID-c0161cfccccd 56 ====================
+---
+uid: SRS-UID-c0161cfccccd
+id: SRS-SomeIP-RoutingManagement-0056
+cb_id: 40610555
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Re-registration After Network Interface Restart
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 PHY link-up 상태가 유지된 상태에서 감지된 Network Interface 재시작에 따라 기존 SOME/IP 통신 자원의 해제가 완료되면 재시작 직전까지 등록 상태였던 모든 service를 재시작 이전과 동일한 service ID로 재등록하여야 한다.
+SOME/IP Routing Management 소프트웨어는 각 대상 service의 등록 상태가 등록 없음에서 등록 완료로 전환된 시점을 해당 service의 재등록 완료로 판정하여야 한다.
+
+SOME/IP Routing Management 소프트웨어는 기존 SOME/IP 통신 자원의 해제가 완료되기 전에는 service 재등록을 수행하지 않아야 한다.
+
+## Notes
+
+Service discovery 재개는 SRS-SomeIP-RoutingManagement-0074에서 규정한다.
+
+
+==================== SRS-UID-54c4d342d145 57 ====================
+---
+uid: SRS-UID-54c4d342d145
+id: SRS-SomeIP-RoutingManagement-0057
+cb_id: 40610538
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Internal State Cleanup After Unavailability Notification
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Parameterized
+parameter_definition:
+- name: P_SvcCleanup_Timeout
+  type: uint32
+  range: 50~2000
+  unit: ms
+  default: '500'
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0016
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 service provider의 비정상 종료 또는 네트워크 연결 단절로 Service Unavailable 통지가 발생한 경우, 해당 통지 후 {P_SvcCleanup_Timeout}ms 이내에 해당 service의 내부 상태를 Service Unavailable 상태로 설정하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 {P_SvcCleanup_Timeout}ms 이내에 해당 service의 내부 상태를 Service Unavailable 상태로 설정하지 못하면, 설정을 완료할 때까지 해당 service를 Service Unavailable 상태로 간주하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-6f3b094b82cc 58 ====================
+---
+uid: SRS-UID-6f3b094b82cc
+id: SRS-SomeIP-RoutingManagement-0058
+cb_id: 40610543
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Expiry on Link Loss or TTL Expiry
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0092
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 Ethernet interface fault가 발생했음을 나타내는 상태 변화 이벤트 수신 시점에 link loss 또는 TTL expiry가 감지되어 StopOffer 및 StopSubscribe를 전송할 수 없으면 해당 offer 및 subscription을 만료 처리하고 Unsubscribe를 수행하여야 한다. 이 만료 처리는 StopOffer/Unsubscribe 전송 가능 시의 종료 절차와 서로 배타적인 조건(StopOffer/StopSubscribe 전송 불가 시)에만 적용되는 별도 경로다.
+
+여기서 StopOffer는 service offer 중단을 위한 SD 엔트리를, StopSubscribe는 해당 service의 EventGroup 구독 취소를 위한 TTL=0 SD 엔트리를 가리키며, 둘은 서비스 제공 중단과 구독 취소라는 서로 다른 절차다.
+
+## Notes
+
+StopOffer/Unsubscribe 전송 가능 시의 종료 절차는 SRS-SomeIP-RoutingManagement-0062에서 규정한다.
+
+
+
+
+==================== SRS-UID-becdf8f4e60a 61 ====================
+---
+uid: SRS-UID-becdf8f4e60a
+id: SRS-SomeIP-RoutingManagement-0061
+cb_id: 40610554
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Initialization Completion Notification
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: [SRS-UID-55f4f1b550fd]
+spec_pattern_type: interface_comm
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 완료되면 application에 미들웨어 초기화 완료 이벤트를 통지하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 초기화 완료 이벤트 전달이 실패하면 해당 실패를 오류로 기록하고 application에 전달 실패를 보고하여야 하며, 초기화 완료 이벤트가 전달된 것으로 처리하지 않아야 한다.
+
+## Notes
+
+초기화 실패 시 미들웨어 초기화 오류 통지는 SRS-SomeIP-RoutingManagement-0083에서, 초기화 완료 이벤트 미통지(억제)는 SRS-SomeIP-RoutingManagement-0082에서 규정한다.
+
+
+==================== SRS-UID-b77efffe27e3 62 ====================
+---
+uid: SRS-UID-b77efffe27e3
+id: SRS-SomeIP-RoutingManagement-0062
+cb_id: 40610553
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: EventGroup Termination On Link Loss Or TTL Expiry
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0092
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 StopOffer 및 StopSubscribe 전송이 가능한 상태에서 link loss 또는 TTL expiry가 감지되면 해당 service offer 또는 subscription을 StopOffer 또는 Unsubscribe로 종료하여야 한다. 이 종료 절차는 StopOffer/StopSubscribe 전송 불가 시의 만료 처리와 서로 배타적인 조건(전송 가능 시)에만 적용되는 별도 경로다.
+
+여기서 StopOffer는 service offer 중단을 위한 SD 엔트리를, StopSubscribe는 해당 service의 EventGroup 구독 취소를 위한 TTL=0 SD 엔트리를 가리키며, 둘은 서비스 제공 중단과 구독 취소라는 서로 다른 절차다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 link loss 또는 TTL expiry가 감지되지 않으면 상기 종료 동작을 수행하지 않아야 한다.
+
+## Notes
+
+StopOffer/StopSubscribe 전송 불가 시의 만료 처리는 SRS-SomeIP-RoutingManagement-0058에서 규정한다.
+
+
+
+
+==================== SRS-UID-aa9f58d2c76e 71 ====================
+---
+uid: SRS-UID-aa9f58d2c76e
+id: SRS-SomeIP-RoutingManagement-0071
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Large Payload Transport Policy
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재등록 및 service discovery 재개 시 각 service 또는 Method에 대해 transport policy를 적용할 때 오류 복구에 대한 hard latency 제약이 없고 SOME/IP payload size가 표준 Ethernet MTU 1500B에서 IP/UDP/SOME/IP header overhead를 제외한 1400 bytes를 초과하는 경우 TCP를 선택하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 오류 복구에 대한 hard latency 제약이 있어 SOME/IP payload size가 1400 bytes를 초과하더라도 UDP 사용이 필수이면 UDP를 선택하고, 이 경로에서 payload를 UDP MTU 기준으로 SOME/IP-TP segmentation 및 reassembly를 적용하여 전송하여야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-1b035ba15cdc 72 ====================
+---
+uid: SRS-UID-1b035ba15cdc
+id: SRS-SomeIP-RoutingManagement-0072
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Event Notification UDP Transport Policy
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재등록 및 service discovery 재개 시 각 service 또는 Method에 대해 transport policy를 적용할 때, 프로젝트 설정으로 고정 주기 반복 전송하도록 구성된 Event/notification이면서 delivery requirement가 best-effort(유실 허용)이고 SOME/IP payload size가 표준 Ethernet MTU 1500B에서 IP/UDP/SOME/IP header overhead를 제외한 1400 bytes 이하인 경우 UDP를 선택하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 해당 Event/notification의 delivery requirement 설정값 또는 payload size 설정값이 프로젝트 설정에 정의되어 있지 않으면 transport policy 평가 실패로 처리하여야 하며, 두 설정값이 모두 정의될 때까지 해당 Event/notification의 transport 선택을 완료한 것으로 처리하지 않아야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-5d80f0f84b43 73 ====================
+---
+uid: SRS-UID-5d80f0f84b43
+id: SRS-SomeIP-RoutingManagement-0073
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Session-Oriented Method TCP Policy
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재등록 및 service discovery 재개 시 각 service 또는 Method에 대해 transport policy를 적용할 때 delivery requirement가 best-effort(유실 허용)이고 SOME/IP payload size가 표준 Ethernet MTU 1500B에서 IP/UDP/SOME/IP header overhead를 제외한 1400 bytes 이하이더라도 session/connection-oriented Method에는 TCP를 선택하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 session/connection-oriented Method에 대한 transport policy 기준을 평가할 수 없거나 TCP를 선택할 수 없으면 transport policy 평가 실패로 처리하여야 하며, 유효한 기준과 입력이 확보될 때까지 해당 Method의 transport 선택을 완료한 것으로 처리하지 않아야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-659d73813109 74 ====================
+---
+uid: SRS-UID-659d73813109
+id: SRS-SomeIP-RoutingManagement-0074
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Discovery Resumption After Network Interface Restart
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 기능은 PHY link-up 상태가 유지된 상태에서 감지된 Network Interface 재시작에 따라 기존 SOME/IP 통신 자원의 해제가 완료된 후 service discovery를 재개하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 기능은 기존 SOME/IP 통신 자원의 해제가 완료되기 전에는 service discovery 재개를 수행하지 않아야 한다.
+
+## Notes
+
+
+==================== SRS-UID-d1038ac62015 75 ====================
+---
+uid: SRS-UID-d1038ac62015
+id: SRS-SomeIP-RoutingManagement-0075
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: SD State Machine Initial State
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-dec119b739b5
+  cb_id: 38210984
+related_items:
+  - SRS-SomeIP-RoutingManagement-0002
+  - SRS-SomeIP-RoutingManagement-0034
+  - SRS-SomeIP-RoutingManagement-0094
+  - SRS-SomeIP-ServiceDiscovery-0003
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 power-on 시 SD 상태 머신을 Initial Wait Phase 진입 전 상태로 리셋하여야 한다.
+
+SOME/IP Routing Management 소프트웨어는 Initial Wait Phase에 진입할 때마다(리셋 이후 최초 진입 포함) {P_SD_InitialDelay_Min}을 {P_SD_InitialDelay_Max} 이하로 하는 범위 내에서 균등 분포 난수로 선택한 지연을 적용하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-5e88eb3bc03d 76 ====================
+---
+uid: SRS-UID-5e88eb3bc03d
+id: SRS-SomeIP-RoutingManagement-0076
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: EventGroup Subscription List Initial State
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+  - SRS-SomeIP-RoutingManagement-0002
+  - SRS-SomeIP-RoutingManagement-0034
+  - SRS-UID-b23269fdfb7d
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 power-on 시 EventGroup 구독 목록을 비활성 상태로 리셋하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-b5eb729c532c 77 ====================
+---
+uid: SRS-UID-b5eb729c532c
+id: SRS-SomeIP-RoutingManagement-0077
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Unexpected Signal Handling During Initialization Readiness Check
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+spec_pattern_type: exception_fault
+evidence:
+- ref: EV-002
+  source: SRC-001
+  location: '/home/worker/.copilot/session-state/40fe21ee-d57c-4557-b2df-1f36bfc324ce/files/routing-management-unexpected-signal-split-source.md#requirement-1-initialization-readiness-check;
+    cited source: /home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0002.md,
+    former Description exception rule'
+  version: null
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: null
+---
+## Description
+
+초기화 준비 상태 확인 중 서비스 등록 테이블 초기화 완료, SD 상태 머신 초기화 완료 및 통신 채널 확립 완료 이외의 준비 상태 이벤트가 수신되면 SOME/IP Routing Management 소프트웨어는 현재 준비 상태 처리 상태를 변경하지 않고 경고를 기록하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-c376cb3c50b1 78 ====================
+---
+uid: SRS-UID-c376cb3c50b1
+id: SRS-SomeIP-RoutingManagement-0078
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Unexpected Signal Handling During Service Registration
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0003
+spec_pattern_type: exception_fault
+evidence:
+- ref: EV-004
+  source: SRC-001
+  location: '/home/worker/.copilot/session-state/40fe21ee-d57c-4557-b2df-1f36bfc324ce/files/routing-management-unexpected-signal-split-source.md#requirement-2-service-registration;
+    cited source: /home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0003.md,
+    former Description exception rule'
+  version: null
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: null
+---
+## Description
+
+서비스 등록 처리 중 준비 완료 신호 이외의 신호가 수신되면 SOME/IP Routing Management 소프트웨어는 현재 서비스 등록 상태를 변경하지 않고 경고를 기록하여야 한다.
+
+## Notes
+
+
+
+==================== SRS-UID-5fc43d086f0b 79 ====================
+---
+uid: SRS-UID-5fc43d086f0b
+id: SRS-SomeIP-RoutingManagement-0079
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: EventGroup Subscription Re-registration After Abnormal Termination
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0087
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 비정상 종료 후 재시작 완료 시, 재연결하는 local application으로부터 재수신되는 EventGroup 구독 요청을 신규 EventGroup 구독 요청으로 수용하여 SubscribeEventgroup 절차를 개시하여야 한다.
+
+## Notes
+
+
+==================== SRS-UID-911e12e10da6 82 ====================
+---
+uid: SRS-UID-911e12e10da6
+id: SRS-SomeIP-RoutingManagement-0082
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Middleware Initialization Completion Event Suppression Before Readiness
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items:
+- SRS-SomeIP-RoutingManagement-0061
+spec_pattern_type: interface_comm
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 초기화 완료 상태가 설정되지 않은 경우 application에 미들웨어 초기화 완료 이벤트를 통지하여서는 안 된다.
+
+## Notes
+
+
+
+==================== SRS-UID-c6ee13f28768 83 ====================
+---
+uid: SRS-UID-c6ee13f28768
+id: SRS-SomeIP-RoutingManagement-0083
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Middleware Initialization Failure Notification
+status: Specified
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: [SRS-UID-b23269fdfb7d]
+spec_pattern_type: interface_comm
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 미들웨어 초기화가 실패하면 application에 미들웨어 초기화 오류를 통지하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 미들웨어 초기화 실패 여부를 판단할 수 없으면 미들웨어 초기화 오류 통지 여부를 결정하지 않아야 하며, 유효한 판단 결과가 확보될 때까지 통지를 완료한 것으로 처리하지 않아야 한다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-70eb93a1b2b5 86 ====================
+---
+uid: SRS-UID-70eb93a1b2b5
+id: SRS-SomeIP-RoutingManagement-0086
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Re-registered EventGroup Subscription Lifetime
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-90652d5d7aa3
+  cb_id: 38285360
+related_items:
+- SRS-SomeIP-ServiceDiscovery-0045
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재수신한 SubscribeEventGroup 요청으로 생성한 subscription을 요청에 적용된 TTL 동안만 유효한 상태로 유지하여야 한다.
+SOME/IP Routing Management 소프트웨어는 TTL이 만료되거나 요청에 적용된 TTL이 유효하지 않은 경우 해당 subscription을 유효한 상태로 취급하여서는 안 된다.
+SOME/IP Routing Management 소프트웨어는 재수신한 SubscribeEventGroup 요청에 대해 SubscribeEventgroupAck를 수신하기 전까지 해당 subscription을 확정된 상태로 취급하지 않아야 하며, SubscribeEventgroupNack을 수신하면 해당 subscription을 거부된 상태로 처리하여야 한다.
+SOME/IP Routing Management 소프트웨어는 재수신한 SubscribeEventGroup 요청에 대해 SubscribeEventgroupAck 또는 SubscribeEventgroupNack을 수신하지 못한 채 최대 {P_SD_SubscribeRetryMax}회의 재전송 각각에 대한 {P_SD_SubscribeRetryDelay}ms 응답 대기 시간이 모두 만료되면, 해당 subscription 시도를 실패로 종료하고 미성립 상태로 유지하여야 한다.
+
+## Notes
+
+
+
+==================== SRS-UID-354ded1a7d89 87 ====================
+---
+uid: SRS-UID-354ded1a7d89
+id: SRS-SomeIP-RoutingManagement-0087
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: EventGroup Subscription Re-registration Preconditions
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 재시작 완료 전이거나 재연결하는 local application으로부터 EventGroup 구독 요청을 수신하지 않은 경우 SubscribeEventGroup 절차를 개시하지 않아야 한다.
+
+## Notes
+
+
+==================== SRS-UID-3cbbc7ed9209 88 ====================
+---
+uid: SRS-UID-3cbbc7ed9209
+id: SRS-SomeIP-RoutingManagement-0088
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Registration Rejection Error Response
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter: []
+related_items: []
+spec_pattern_type: data_logic
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 거부한 등록 요청의 등록 요청자에게 정의된 SOME/IP error response code를 registration request API의 반환값으로 반환하여야 한다.
+
+※ 예외 규칙
+SOME/IP Routing Management 소프트웨어는 거부 사유에 대응하는 정의된 SOME/IP error response code가 존재하지 않으면 해당 등록 요청을 등록 완료 상태로 처리하여서는 안 된다.
+
+## Notes
+
+
+
+
+==================== SRS-UID-f49e08b0fe13 91 ====================
+---
+uid: SRS-UID-f49e08b0fe13
+id: SRS-SomeIP-RoutingManagement-0091
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Service Registration Failure Notification
+status: Define
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-936d288733a4
+  cb_id: 38285338
+related_items:
+- SRS-SomeIP-RoutingManagement-0002
+- SRS-SomeIP-RoutingManagement-0078
+spec_pattern_type: exception_fault
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 {P_RM_ServiceRegister_Timeout}ms 이내에 service 등록이 완료되지 않으면 service 등록 실패로 판정하여 application에 통지하여야 한다.
+
+## Notes
+
+
+
+==================== SRS-UID-2f0f0d96b5a9 92 ====================
+---
+uid: SRS-UID-2f0f0d96b5a9
+id: SRS-SomeIP-RoutingManagement-0092
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Ethernet Fault Service Termination Path Dispatch
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-168afc4c4227
+  cb_id: 40610528
+related_items:
+- SRS-SomeIP-RoutingManagement-0017
+- SRS-SomeIP-RoutingManagement-0058
+- SRS-SomeIP-RoutingManagement-0062
+- SRS-SomeIP-RoutingManagement-0093
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 정상 중단 조건을 만족하지 못하거나 이벤트 수신 시점부터 {P_EthFault_ServiceSuspend_Timeout} 이내에 StopOffer 및 StopSubscribe 전송을 완료하지 못한 상태에서 link loss 또는 TTL expiry가 감지되면, StopOffer 및 StopSubscribe 전송이 불가능한 경우에는 전송 불가 시의 offer 및 subscription 만료·Unsubscribe 경로를 적용하고 전송이 가능한 경우에는 전송 가능 시의 StopOffer·Unsubscribe 종료 경로를 적용하여야 한다.
+
+## Notes
+
+정상 중단 조건 판단과 타임아웃 내 전송은 SRS-SomeIP-RoutingManagement-0017이 규정한다. 전송 불가 시 경로는 SRS-SomeIP-RoutingManagement-0058, 전송 가능 시 경로는 SRS-SomeIP-RoutingManagement-0062가 규정하며, 이 item은 그 둘 중 어느 경로가 적용되는지를 결정하는 디스패치 규칙만 책임진다.
+
+
+==================== SRS-UID-41ad9a7d6d24 93 ====================
+---
+uid: SRS-UID-41ad9a7d6d24
+id: SRS-SomeIP-RoutingManagement-0093
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: Ethernet Fault Timeout Without Link Loss Guard
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-168afc4c4227
+  cb_id: 40610528
+related_items:
+- SRS-SomeIP-RoutingManagement-0017
+- SRS-SomeIP-RoutingManagement-0092
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 이벤트 수신 시점부터 {P_EthFault_ServiceSuspend_Timeout} 이내에 StopOffer 및 StopSubscribe 전송을 완료하지 못하였으나 해당 link가 link-up 상태이고 해당 offer 및 subscription의 TTL이 유효하며 link loss 또는 TTL expiry가 감지되지 않은 경우, link loss 또는 TTL expiry에 따른 만료 처리 및 종료 경로를 적용하여서는 안 된다.
+
+## Notes
+
+SRS-SomeIP-RoutingManagement-0092가 규정하는 디스패치(전송 불가/가능 경로 선택)는 link loss 또는 TTL expiry 감지를 전제로 하므로, 이 item은 그 전제 자체가 성립하지 않는 경계 조건에서 오탐으로 종료 경로가 적용되지 않음을 명시한다.
+
+
+==================== SRS-UID-5bda6a079cf0 94 ====================
+---
+uid: SRS-UID-5bda6a079cf0
+id: SRS-SomeIP-RoutingManagement-0094
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: OfferService Repetition Phase Retry
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-c7c211a83191
+  cb_id: 40438666
+related_items:
+- SRS-SomeIP-RoutingManagement-0017
+- SRS-SomeIP-RoutingManagement-0035
+- SRS-SomeIP-RoutingManagement-0075
+- SRS-SomeIP-RoutingManagement-0095
+- SRS-SomeIP-ServiceDiscovery-0004
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 OfferService 개시 후 Initial Wait Phase를 거쳐, {P_SD_RepetitionMax}에 도달할 때까지 {P_SD_RepetitionBaseDelay}로 매회 지연을 배가시키며 Repetition Phase의 OfferService를 재전송하여야 한다.
+
+## Notes
+
+OfferService 개시 트리거 자체는 SRS-SomeIP-RoutingManagement-0035가 규정한다. Initial Wait Phase 진입 시점의 지연 산정은 SRS-SomeIP-RoutingManagement-0075가 규정하며, 이 item은 Initial Wait Phase 종료 이후 Repetition Phase의 재전송만 책임진다. Repetition Phase 종료 후 Main Phase 주기 전송은 SRS-SomeIP-RoutingManagement-0095가 규정한다. Ethernet fault로 인한 OfferService 중단(StopOffer)은 SRS-SomeIP-RoutingManagement-0017/0092/0093 계열이 규정하며 이 Repetition Phase 재전송을 인터럽트할 수 있다. {P_SD_RepetitionBaseDelay}/{P_SD_RepetitionMax}는 SRS-SomeIP-ServiceDiscovery-0004가 소유한 파라미터다.
+
+
+==================== SRS-UID-67d6428f1fae 95 ====================
+---
+uid: SRS-UID-67d6428f1fae
+id: SRS-SomeIP-RoutingManagement-0095
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: OfferService Main Phase Cyclic Offer
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-74abb389f183
+  cb_id: 40438667
+related_items:
+- SRS-SomeIP-RoutingManagement-0017
+- SRS-SomeIP-RoutingManagement-0035
+- SRS-SomeIP-RoutingManagement-0094
+- SRS-SomeIP-ServiceDiscovery-0005
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 Repetition Phase 종료 후 {P_SD_CyclicOfferDelay} 주기로 Main Phase의 OfferService 주기적 전송을 유지하여야 한다.
+
+## Notes
+
+Repetition Phase 재전송은 SRS-SomeIP-RoutingManagement-0094가 규정한다. Ethernet fault로 인한 OfferService 중단(StopOffer)은 SRS-SomeIP-RoutingManagement-0017/0092/0093 계열이 규정하며 이 Main Phase 주기 전송을 인터럽트할 수 있다. {P_SD_CyclicOfferDelay}는 SRS-SomeIP-ServiceDiscovery-0005가 소유한 파라미터다.
+
+
+==================== SRS-UID-91ee417deb54 96 ====================
+---
+uid: SRS-UID-91ee417deb54
+id: SRS-SomeIP-RoutingManagement-0096
+cb_id: null
+domain: someip
+parent: SRS-UID-b5ad30afa2ec
+title: FindService Repetition Until Max Reached or Offer Received
+status: Draft
+inclusion_type: Mandatory
+optional_condition: null
+configuration_type: Fixed
+parameter_definition: []
+mapped_parameter:
+- uid: SRS-UID-f422d5d47636
+  cb_id: 40438673
+related_items:
+- SRS-SomeIP-RoutingManagement-0036
+- SRS-SomeIP-ServiceDiscovery-0011
+spec_pattern_type: mode_state
+evidence: []
+verification: null
+diagrams: []
+attachments: []
+cb_target_profile:
+  parent_cb_id: 38223716
+---
+## Description
+
+SOME/IP Routing Management 소프트웨어는 최초 FindService 전송 후 해당 service의 OfferService를 수신하지 못하면 {P_SD_FindRepetitionMax}에 도달할 때까지 {P_SD_FindRepetitionBaseDelay}로 FindService를 재전송하여야 하며, {P_SD_FindRepetitionMax}에 도달하거나 해당 service의 OfferService를 수신하면 재전송을 중단하여야 한다.
+
+## Notes
+
+FindService 최초 전송 트리거는 SRS-SomeIP-RoutingManagement-0036이 규정한다. 재전송 간격 공식 자체는 SRS-SomeIP-ServiceDiscovery-0011이 소유한다 — 이 item은 그 공식을 사용해 "언제 멈추는가"(횟수 도달 또는 Offer 수신)를 추가로 규정하며, 0011에는 없는 RoutingManagement 고유의 종료 조건이라 중복이 아니다.

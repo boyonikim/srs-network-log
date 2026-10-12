@@ -1,0 +1,91 @@
+{
+  "status": "merged",
+  "output_path": "/home/worker/workspace/someip-standard/.srs-run/staging/RUN-6ea9e80601dc/review-re-p4.review.json",
+  "parts": 2,
+  "missing_coverage": []
+}
+merge EXIT:0
+=== accept ===
+{
+  "status": "accepted",
+  "gate": {
+    "run_id": "RUN-6ea9e80601dc",
+    "requested_scope": {
+      "mode": "review-re",
+      "domains": [
+        "someip"
+      ],
+      "targets": [
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0001.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0002.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0003.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0004.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0006.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0012.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0013.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0016.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0017.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0018.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0019.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0020.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0034.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0035.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0036.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0041.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0048.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0051.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0052.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0056.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0057.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0058.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0061.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0062.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0071.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0072.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0073.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0074.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0075.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0076.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0077.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0078.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0079.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0082.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0083.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0086.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0087.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0088.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0091.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0092.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0093.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0094.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0095.md",
+        "/home/worker/workspace/someip-standard/srs/InVehicleCommunication/SomeIP/RoutingManagement/SRS-SomeIP-RoutingManagement-0096.md"
+      ]
+    },
+    "executed_reviews": [
+      "requirements-engineering"
+    ],
+    "not_executed_reviews": [],
+    "blocking_reasons": [
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0116 자체 정의), foreign={}(본문에 {P_Name} 참조 없음), declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional)와 SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindInitialDelay_Min, P_SD_FindInitialDelay_Max}(SD-0010 자체 정의), 본문은 두 이름 모두 자기 own에서만 참조하므로 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과. 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-f26b7f9795fc(SD-0101, leaves, nonfunctional)와 SRS-UID-a92ae9773aae(SD-0102, leaves, mode_state)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL. (이전 회차에서 context로 존재할 때 SD-0101/0102 측에서 같은 문제로 FAIL했고, SD-0010이 직접 target으로 승격된 이번 회차에는 SD-0010 자체도 동일 조건5로 FAIL.)",
+      "requirements-engineering/RE-EXCEPT-001: 자기 본문은 \"최대 횟수 도달\" 또는 \"Offer 수신\" 두 경우 모두 동일하게 \"재전송 중단\"만 규정하고, 탐색 실패(최대 횟수 소진, Offer 미수신)라는 비정상 결과에 대한 이벤트/통지/복구 동작을 서술하지 않는다. 확인한 연관 형제는 forward related_items의 SRS-SomeIP-RoutingManagement-0036(mode_state, 개시 트리거만 규정, 소진 처리 없음)과 SRS-SomeIP-ServiceDiscovery-0011(nonfunctional, 재전송 간격 공식만 소유, 소진 처리 없음) 두 건이며, 둘 다 exception_fault 타입도 아니고 소진 시 결과를 서술하지도 않아 위임이 성립하지 않는다. 이번 회차에 target으로 승격된 SRS-SomeIP-ServiceDiscovery-0115(exception_fault, FindService 소진 시 통지+Main Phase 진입을 정확히 규정)가 실질적 위임 대상이지만, 0096의 related_items에도 0115의 related_items에도 서로를 가리키는 링크가 없어(양방향 모두 부재) 확인된 형제로 인정할 수 없다. 링크가 생성되기 전까지 FAIL 유지.",
+      "requirements-engineering/RE-PARAMREF-001: own={}, foreign={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}, declared=[SRS-UID-f422d5d47636](SD-0011). required 계산: 두 이름을 parameter_definition으로 소유한 leaf를 input.leaves/input.context_leaves 전체에서 찾으면 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional), SRS-UID-631981184c37(SD-0116, leaves, mode_state), SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault) 3곳이 동일한 두 파라미터 이름을 각자 parameter_definition으로 소유하고 있음(ServiceDiscovery 모듈 내 중복 소유 상태, 이번 회차에 SD-0116/SD-0115가 직접 RE-PARAMREF-001 FAIL로 확인됨). required={f422d5d47636, 631981184c37, acb1c88d4eae}, declared={f422d5d47636} -> required-declared={631981184c37, acb1c88d4eae} ≠ ∅, 조건 2.",
+      "requirements-engineering/RE-COMPLETE-001: 본문은 \"재전송 정책이 있다\"는 것만 서술하고 그 정책의 종료/경계(언제 멈추는지, 성공/실패 결과가 무엇인지)를 전혀 명시하지 않는다(사실상 RM-0096보다도 정보가 적음). Notes에도 추가 설명 없음.",
+      "requirements-engineering/RE-EXCEPT-001: 자기 본문은 재전송 트리거만 서술하고 소진(최대 횟수 도달 등) 시의 비정상 결과나 대응을 전혀 언급하지 않는다. 확인된 연관 형제는 forward related_items의 SRS-SomeIP-ServiceDiscovery-0011(nonfunctional, 재전송 간격 공식만 소유, 소진 처리 없음) 하나뿐이며, exception_fault 타입도 아니고 소진 시 결과도 서술하지 않아 위임이 성립하지 않는다. 실질적으로 소진 처리를 규정하는 SRS-SomeIP-ServiceDiscovery-0115(exception_fault)는 에 있지만 0102의 related_items에도 0115의 related_items에도 서로를 가리키는 링크가 없어 확인된 형제로 인정할 수 없다.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindInitialDelay_Min, P_SD_FindInitialDelay_Max}(SD-0102 자체 정의), 본문은 {P_Name} 참조가 전혀 없어 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과. 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-909832e4ca50(SD-0010, context, nonfunctional)와 SRS-UID-f26b7f9795fc(SD-0101, leaves, nonfunctional)가 동일한 두 이름을 동일한 값으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0115 자체 정의), 본문은 {P_SD_FindRepetitionMax}만 참조하며 이는 own에 포함되므로 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-f422d5d47636(SD-0011, context, nonfunctional)와 SRS-UID-631981184c37(SD-0116, leaves, mode_state)가 동일한 두 이름을 동일한 값으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindInitialDelay_Min, P_SD_FindInitialDelay_Max}(SD-0101 자체 정의), 본문은 {P_Name} 중괄호 문법으로 이 두 이름을 참조하지 않아 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과. 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-909832e4ca50(SD-0010, context, nonfunctional)와 SRS-UID-a92ae9773aae(SD-0102, leaves, mode_state)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL.",
+      "requirements-engineering/RE-TYPE-001: spec_pattern_type=nonfunctional이지만 본문은 값/범위 제약(SCALE/METER/MUST 형 제약문, 예: \"Min을 Max 이하로 구성\")을 전혀 서술하지 않고, \"Service Find 절차를 개시할 때마다(트리거) ... 대기한 후 FindService를 전송하여야 한다(동작)\"라는 절차/행위 기술로, mode_state 또는 interface_comm의 핵심 형태(트리거→동작/전송)에 해당한다. 값 범위 제약은 SRS-SomeIP-ServiceDiscovery-0010이 이미 담당하고 있어, 이 leaf는 nonfunctional 핵심 형태를 충족하지 못한다.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_FindRepetitionBaseDelay, P_SD_FindRepetitionMax}(SD-0011 자체 정의), 본문은 두 이름 모두 자기 own에서만 참조하므로 foreign={}, declared=[], required=[] -> 조건 2/3/4는 빈 집합으로 통과, 조건 5 검사: 같은 L3(ServiceDiscovery) 내 SRS-UID-631981184c37(SD-0116, leaves, mode_state)와 SRS-UID-acb1c88d4eae(SD-0115, leaves, exception_fault)가 동일한 두 이름을 동일한 값(range/unit/default 동일)으로 각자 parameter_definition으로 중복 소유함 -> 조건 5 FAIL. (이전 회차에서 context로 존재할 때 SD-0116/0115 측에서 같은 문제로 FAIL했고, SD-0011이 직접 target으로 승격된 이번 회차에는 SD-0011 자체도 동일 조건5로 FAIL.)",
+      "requirements-engineering/RE-PARAMREF-001: own={}, foreign={P_SD_SubscribeRetryDelay, P_SD_SubscribeRetryMax}, declared=[SRS-UID-90652d5d7aa3], required=[SRS-UID-4aa54bece4a9, SRS-UID-54ac7aca6d5c, SRS-UID-90652d5d7aa3] -> 조건 2. required-declared={SRS-UID-54ac7aca6d5c(SD-0063, context_leaves), SRS-UID-4aa54bece4a9(SD-0048, context_leaves)}. 본문은 {P_SD_SubscribeRetryMax}와 {P_SD_SubscribeRetryDelay}를 참조하나, mapped_parameter에는 SD-0045(SRS-UID-90652d5d7aa3) 하나만 선언되어 있음. 두 파라미터를 소유하는 SD-0063(P_SD_SubscribeRetryMax)와 SD-0048(P_SD_SubscribeRetryMax, P_SD_SubscribeRetryDelay 양자 소유)에 대한 mapped_parameter 항목이 누락됨.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_SubscribeRetryDelay, P_SD_SubscribeRetryMax}, foreign={}, declared=[], required=[] -> 조건 5. 중복 소유자: P_SD_SubscribeRetryMax는 SD-0045(자신)/SD-0048(SRS-UID-4aa54bece4a9)/SD-0063(SRS-UID-54ac7aca6d5c) 3개 leaf가, P_SD_SubscribeRetryDelay는 SD-0045(자신)/SD-0048(SRS-UID-4aa54bece4a9) 2개 leaf가 같은 ServiceDiscovery L3 모듈 내에서 parameter_definition으로 중복 소유.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_SubscribeRetryDelay, P_SD_SubscribeRetryMax}, foreign={}, declared=[], required=[] -> 조건 5. 중복 소유자: P_SD_SubscribeRetryMax는 SD-0048(자신)/SD-0045(SRS-UID-90652d5d7aa3)/SD-0063(SRS-UID-54ac7aca6d5c) 3개 leaf가, P_SD_SubscribeRetryDelay는 SD-0048(자신)/SD-0045(SRS-UID-90652d5d7aa3) 2개 leaf가 같은 ServiceDiscovery L3 모듈 내에서 parameter_definition으로 중복 소유.",
+      "requirements-engineering/RE-PARAMREF-001: own={P_SD_SubscribeRetryMax}, foreign={P_SD_SubscribeRetryDelay}, declared=[SRS-UID-90652d5d7aa3], required=[SRS-UID-4aa54bece4a9, SRS-UID-90652d5d7aa3] -> 조건 2. required-declared={SRS-UID-4aa54bece4a9(SD-0048, 현재 해당 배치에서 input.leaves)}. 본문은 {P_SD_SubscribeRetryDelay}를 참조하나 mapped_parameter에는 SD-0045(SRS-UID-90652d5d7aa3)만 선언되어 있고, 동일 파라미터를 또 소유하는 SD-0048에 대한 매핑이 누락됨."
+    ],
+    "quality_verdict": "FAIL",
+    "publishable": false
+  },
+  "next_task": null
+}
+accept EXIT:0

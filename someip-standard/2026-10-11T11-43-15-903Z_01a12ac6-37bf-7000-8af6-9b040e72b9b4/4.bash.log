@@ -1,0 +1,13 @@
+python: 3.12.3
+package_version: 0.13.0
+status: OK
+review_dependencies: [{"dependency": "srs-clarity", "files": [{"path": "/home/worker/.agents/skills/srs-clarity/SKILL.md", "status": "PRESENT"}, {"path": "/home/worker/.agents/skills/srs-clarity/instruction_SRS_clarity_single.md", "status": "PRESENT"}], "host_loading": "UNVERIFIED", "resolved_root": "/home/worker/.agents/skills/srs-clarity"}]
+review_readiness: UNVERIFIED (independent rules continue; host loading and evidence consultation require verification)
+EXIT:0
+===domain===
+python: 3.12.3
+package_version: 0.13.0
+status: OK
+review_dependencies: [{"dependency": "network-domain-knowledge:someip", "files": [{"path": "/home/worker/.agents/skills/network-domain-knowledge/SKILL.md", "status": "PRESENT"}, {"path": "/home/worker/.agents/skills/network-domain-knowledge/references/someip-guide.md", "status": "PRESENT"}, {"path": "/home/worker/.agents/skills/network-domain-knowledge/references/knowledge-consumer-contract.md", "status": "PRESENT"}, {"path": "/home/worker/.agents/skills/network-domain-knowledge/scripts/kbctl.py", "status": "PRESENT"}], "host_loading": "UNVERIFIED", "resolved_root": "/home/worker/.agents/skills/network-domain-knowledge", "data_root": "/home/worker/.agents/skills/network-domain-knowledge", "cli": {"status": "AVAILABLE", "version": {"status": "OK", "release": "runtime-no-readme-20261011", "tool_version": "0.3.0", "source_commit": "08852ec9e57d4ac3cd3997327f319dcf77104eec", "checks": "quick"}, "consult_evidence": "UNVERIFIED"}}]
+review_readiness: UNVERIFIED (independent rules continue; host loading and evidence consultation require verification)
+EXIT:0
